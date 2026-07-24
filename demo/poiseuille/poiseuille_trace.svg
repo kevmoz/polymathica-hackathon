@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-label="Poiseuille channel benchmark velocity profile">
+  <rect width="900" height="420" fill="#0d1117"/>
+  <text x="70" y="38" fill="#f0f6fc" font-family="Arial" font-size="22">Plane Poiseuille benchmark: parabolic channel profile</text>
+  <rect x="90" y="55" width="710" height="270" fill="#161b22" stroke="#30363d"/>
+  <line x1="90" y1="55" x2="90" y2="325" stroke="#8b949e" stroke-width="2"/>
+  <polyline points="90.0,325.0 176.0,316.6 256.4,308.1 331.3,299.7 400.6,291.2 464.4,282.8 522.7,274.4 575.4,265.9 622.5,257.5 664.1,249.1 700.2,240.6 730.7,232.2 755.6,223.8 775.0,215.3 788.9,206.9 797.2,198.4 800.0,190.0 797.2,181.6 788.9,173.1 775.0,164.7 755.6,156.2 730.7,147.8 700.2,139.4 664.1,130.9 622.5,122.5 575.4,114.1 522.7,105.6 464.4,97.2 400.6,88.8 331.3,80.3 256.4,71.9 176.0,63.4 90.0,55.0" fill="none" stroke="#f2cc60" stroke-width="7" opacity="0.75"/>
+  <polyline points="90.0,325.0 176.0,316.6 256.4,308.1 331.3,299.7 400.6,291.2 464.4,282.8 522.7,274.4 575.4,265.9 622.5,257.5 664.1,249.1 700.2,240.6 730.7,232.2 755.6,223.8 775.0,215.3 788.9,206.9 797.2,198.4 800.0,190.0 797.2,181.6 788.9,173.1 775.0,164.7 755.6,156.2 730.7,147.8 700.2,139.4 664.1,130.9 622.5,122.5 575.4,114.1 522.7,105.6 464.4,97.2 400.6,88.8 331.3,80.3 256.4,71.9 176.0,63.4 90.0,55.0" fill="none" stroke="#2f81f7" stroke-width="3"/>
+  <text x="70" y="360" fill="#c9d1d9" font-family="Arial" font-size="16">Numerical finite-difference Stokes solution overlaid on analytic parabolic profile.</text>
+  <text x="70" y="388" fill="#8b949e" font-family="Arial" font-size="14">Reference values: centerline velocity 1/8, bulk flow rate 1/12, wall shear magnitude 1/2.</text>
+</svg>

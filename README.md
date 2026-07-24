@@ -13,7 +13,9 @@ A governed scientific workflow that converts a configured Navier-Stokes experime
 - Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 - Validation notes: [docs/VALIDATION.md](docs/VALIDATION.md)
 - Public benchmark solver: [docs/BENCHMARK.md](docs/BENCHMARK.md)
+- Benchmark matrix: [docs/BENCHMARK_MATRIX.md](docs/BENCHMARK_MATRIX.md)
 - Pressure-projection benchmark: [docs/PROJECTION.md](docs/PROJECTION.md)
+- Poiseuille channel benchmark: [docs/POISEUILLE.md](docs/POISEUILLE.md)
 
 ## Demonstrated Workflow
 
@@ -29,7 +31,7 @@ This repository demonstrates the governed evidence workflow using a deterministi
 
 It does not contain the complete private POLYMATHICA solver, PSIC, Graphics Core or Olana development repositories.
 
-The public demo verifies orchestration, configuration governance, validation gates, scientific visualisation, report generation, provenance hashing, artifact integrity checks and archive creation. It also includes a Taylor-Green benchmark solver with analytic reference and convergence evidence, plus a known-mode pressure-projection benchmark. The release videos show larger GPU/rendering outputs prepared from the broader POLYMATHICA workspace.
+The public demo verifies orchestration, configuration governance, validation gates, scientific visualisation, report generation, provenance hashing, artifact integrity checks and archive creation. It also includes three compact benchmark families: Taylor-Green viscous decay, known-mode pressure projection and plane Poiseuille channel flow. The release videos show larger GPU/rendering outputs prepared from the broader POLYMATHICA workspace.
 
 ## Run In Three Commands
 
@@ -40,6 +42,7 @@ python -m pip install -e .
 python -m polymathica_hackathon.cli --output demo/output
 python -m polymathica_hackathon.benchmark --output demo/benchmark
 python -m polymathica_hackathon.projection --output demo/projection
+python -m polymathica_hackathon.poiseuille --output demo/poiseuille
 python -m unittest discover -s tests
 ```
 
@@ -68,6 +71,9 @@ PYTHONPATH=src python -m polymathica_hackathon.cli --output demo/output
 - Benchmark report: [demo/benchmark/benchmark_report.html](demo/benchmark/benchmark_report.html)
 - Projection validation: [demo/projection/projection_validation.json](demo/projection/projection_validation.json)
 - Projection report: [demo/projection/projection_report.html](demo/projection/projection_report.html)
+- Poiseuille validation: [demo/poiseuille/poiseuille_validation.json](demo/poiseuille/poiseuille_validation.json)
+- Poiseuille convergence: [demo/poiseuille/poiseuille_convergence.json](demo/poiseuille/poiseuille_convergence.json)
+- Poiseuille report: [demo/poiseuille/poiseuille_report.html](demo/poiseuille/poiseuille_report.html)
 
 Benchmark summary:
 
@@ -84,6 +90,15 @@ Projection summary:
 - pressure/potential component recovered from divergence
 - divergence reduced from `1.241984e-01` to `6.678177e-16`
 - projected-field L2 error: `5.770979e-17`
+
+Poiseuille summary:
+
+- pressure-driven steady Stokes channel-flow benchmark
+- analytic parabolic velocity profile and reference values
+- bulk flow-rate convergence at `n = 16, 32, 64, 128`
+- centerline velocity reference: `1/8`
+- bulk flow-rate reference: `1/12`
+- wall-shear magnitude reference: `1/2`
 
 ## Core Systems
 

@@ -1,0 +1,13 @@
+{
+  "artifacts": {
+    "poiseuille_config.json": "48628e8cbc0b1ba97f93d7e244c1d7c2e10fae6e9a81afad05e906c0cebc3615",
+    "poiseuille_convergence.json": "096280fa15c642e0ebdf4cdb7cac6e3173623ea72a7783d00b20b6ae6403718e",
+    "poiseuille_profile.json": "272f7412a53e8fdb91340eca5384475ff147b1f7ec9f6409fc1df65692bb78ff",
+    "poiseuille_report.html": "2dfe843491a0ff511c84591028a06c86febe076c41adc41f8f50c0e182d33753",
+    "poiseuille_trace.svg": "27db224973449ef2a01c8bf93a18b2f345d0b46137a94ce4a12d6df1374c6100",
+    "poiseuille_validation.json": "5098cb45499dd1d85c1b2087eef6443b83dcc89a837ab1ee0a3791498bb22ca0"
+  },
+  "benchmark_id": "PLANE-POISEUILLE-STEADY-STOKES",
+  "schema": "polymathica.poiseuille.archive.v1",
+  "status": "passed"
+}

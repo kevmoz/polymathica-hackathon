@@ -13,8 +13,11 @@ python -m pip install -e .
 python -m polymathica_hackathon.cli --output demo/output
 python -m polymathica_hackathon.benchmark --output demo/benchmark
 python -m polymathica_hackathon.projection --output demo/projection
+python -m polymathica_hackathon.poiseuille --output demo/poiseuille
 python -m unittest discover -s tests
 ```
+
+For the numerical evidence at a glance, open [BENCHMARK_MATRIX.md](BENCHMARK_MATRIX.md).
 
 ## What To Look For
 
@@ -28,12 +31,14 @@ python -m unittest discover -s tests
 - grid-convergence evidence showing observed second-order behavior
 - divergence and analytic energy metrics for the benchmark
 - independent pressure-projection benchmark with a known Helmholtz split
+- pressure-driven plane Poiseuille benchmark with analytic centerline, flow-rate and wall-shear references
+- convergence evidence across multiple canonical quantities rather than a single visual output
 
 ## Public Demo Scope
 
 This repository demonstrates the governed evidence workflow using a deterministic Navier-Stokes replay. It does not contain the complete private POLYMATHICA solver, PSIC, Graphics Core or Olana repositories.
 
-The public demo verifies orchestration, validation gates, visualisation, report generation, provenance, artifact hash checks and archive creation.
+The public demo verifies orchestration, validation gates, visualisation, report generation, provenance, artifact hash checks and archive creation. Its numerical evidence is intentionally compact but spans unsteady periodic decay, incompressibility projection and wall-bounded channel flow.
 
 ## Submission Claim
 

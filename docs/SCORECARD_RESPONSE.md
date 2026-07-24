@@ -14,6 +14,8 @@ This repository directly addresses the most important judge-readiness concerns:
 | Need convergence proof | `demo/benchmark/convergence_study.json` records n = 16, 32, 64 convergence with observed order 2.005. |
 | Need incompressibility evidence | `demo/benchmark/benchmark_validation.json` records max divergence L2 near machine precision. |
 | Need pressure/projection context | `src/polymathica_hackathon/projection.py` runs a known-mode pressure-projection benchmark and commits validation artifacts. |
-| Need multiple independent canonical checks | The public package now includes Taylor-Green viscous decay and a pressure-projection benchmark. |
+| Need wall-bounded benchmark evidence | `src/polymathica_hackathon/poiseuille.py` runs a pressure-driven plane Poiseuille benchmark against analytic centerline, bulk-flow and wall-shear references. |
+| Need multiple independent canonical checks | The public package now includes Taylor-Green viscous decay, known-mode pressure projection and plane Poiseuille channel flow. |
+| Need convergence beyond one case | Taylor-Green records grid convergence for final velocity error; Poiseuille records second-order bulk flow-rate convergence. |
 
 The current public package is intentionally compact: it is designed to be inspectable in minutes, while the release videos and gallery show larger simulation and rendering outputs from the broader POLYMATHICA workspace.

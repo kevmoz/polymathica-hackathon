@@ -1,0 +1,37 @@
+{
+  "convergence": {
+    "mean_observed_order": 1.9999999999322,
+    "observed_orders": [
+      1.9999999999966172,
+      1.999999999957438,
+      1.9999999998425453
+    ]
+  },
+  "metrics": {
+    "analytic_bulk_flow_rate": 0.08333333333333333,
+    "analytic_centerline_velocity": 0.125,
+    "bulk_flow_rate": 0.0832519531249998,
+    "centerline_velocity": 0.12499999999999967,
+    "flow_rate_error": 8.1380208333523e-05,
+    "l2_error": 2.25936822985947e-16,
+    "left_wall_shear": 0.4999999999999994,
+    "max_error": 3.7470027081099033e-16,
+    "right_wall_shear": -0.4999999999999988,
+    "wall_shear_error": 1.2212453270876722e-15
+  },
+  "reference": {
+    "bulk_flow_rate": 0.08333333333333333,
+    "centerline_velocity": 0.125,
+    "velocity": "u(y) = forcing * y * (1-y) / (2*nu)",
+    "wall_shear_magnitude": 0.5
+  },
+  "schema": "polymathica.poiseuille.validation.v1",
+  "status": "passed",
+  "tolerances": {
+    "flow_rate_tolerance": 0.0001,
+    "l2_tolerance": 1e-13,
+    "max_tolerance": 1e-13,
+    "minimum_observed_order": 1.95,
+    "wall_shear_tolerance": 1e-12
+  }
+}

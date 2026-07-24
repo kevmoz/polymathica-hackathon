@@ -1,0 +1,40 @@
+{
+  "mean_observed_order": 1.9999999999322,
+  "observed_orders": [
+    1.9999999999966172,
+    1.999999999957438,
+    1.9999999998425453
+  ],
+  "quantity": "bulk flow-rate error vs analytic Poiseuille reference",
+  "rows": [
+    {
+      "dy": 0.0625,
+      "flow_rate_error": 0.0003255208333333287,
+      "l2_error": 7.712149394465008e-18,
+      "n": 16,
+      "wall_shear_error": 1.1102230246251565e-16
+    },
+    {
+      "dy": 0.03125,
+      "flow_rate_error": 8.1380208333523e-05,
+      "l2_error": 2.25936822985947e-16,
+      "n": 32,
+      "wall_shear_error": 1.2212453270876722e-15
+    },
+    {
+      "dy": 0.015625,
+      "flow_rate_error": 2.0345052083980963e-05,
+      "l2_error": 7.535019043304456e-16,
+      "n": 64,
+      "wall_shear_error": 3.6637359812630166e-15
+    },
+    {
+      "dy": 0.0078125,
+      "flow_rate_error": 5.086263021550352e-06,
+      "l2_error": 8.572539805819242e-16,
+      "n": 128,
+      "wall_shear_error": 5.9396931817445875e-15
+    }
+  ],
+  "schema": "polymathica.poiseuille.convergence.v1"
+}

@@ -1,0 +1,37 @@
+{
+  "benchmark_id": "PLANE-POISEUILLE-STEADY-STOKES",
+  "convergence": {
+    "grid_sizes": [
+      16,
+      32,
+      64,
+      128
+    ]
+  },
+  "equation_family": "steady incompressible Stokes channel flow",
+  "grid": {
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "n": 32
+  },
+  "parameters": {
+    "forcing": 1.0,
+    "nu": 1.0
+  },
+  "public_scope": "canonical pressure-driven wall-bounded flow benchmark",
+  "reference": {
+    "bulk_flow_rate": 0.08333333333333333,
+    "centerline_velocity": 0.125,
+    "velocity": "u(y) = forcing * y * (1-y) / (2*nu)",
+    "wall_shear_magnitude": 0.5
+  },
+  "validation": {
+    "flow_rate_tolerance": 0.0001,
+    "l2_tolerance": 1e-13,
+    "max_tolerance": 1e-13,
+    "minimum_observed_order": 1.95,
+    "wall_shear_tolerance": 1e-12
+  }
+}

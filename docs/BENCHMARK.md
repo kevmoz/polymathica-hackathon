@@ -1,6 +1,6 @@
 # Public Benchmark Solver
 
-This repository includes one small benchmark-backed solver example:
+This repository includes a compact benchmark suite. This page documents the Taylor-Green component:
 
 **Taylor-Green vortex viscous decay**
 
@@ -44,7 +44,7 @@ Generated artifacts:
 
 ## Scope
 
-This is not the full private POLYMATHICA solver stack. It is a public, modest-resolution benchmark designed to prove that the submission contains a real executable numerical solver path with a documented reference comparison.
+This is not the full private POLYMATHICA solver stack. It is a public, modest-resolution benchmark designed to prove that the submission contains a real executable numerical solver path with a documented reference comparison. See [PROJECTION.md](PROJECTION.md) and [POISEUILLE.md](POISEUILLE.md) for the complementary projection and channel-flow benchmarks.
 
 ## Equation Context
 

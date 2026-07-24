@@ -20,6 +20,9 @@ Run locally:
 
 ```bash
 python -m polymathica_hackathon.cli --output demo/output
+python -m polymathica_hackathon.benchmark --output demo/benchmark
+python -m polymathica_hackathon.projection --output demo/projection
+python -m polymathica_hackathon.poiseuille --output demo/poiseuille
 python -m unittest discover -s tests
 ```
 
@@ -49,5 +52,15 @@ Projection evidence:
 - `demo/projection/projection_manifest.json`
 
 See [PROJECTION.md](PROJECTION.md) for the public pressure-projection benchmark.
+
+Poiseuille evidence:
+
+- `demo/poiseuille/poiseuille_config.json`
+- `demo/poiseuille/poiseuille_profile.json`
+- `demo/poiseuille/poiseuille_convergence.json`
+- `demo/poiseuille/poiseuille_validation.json`
+- `demo/poiseuille/poiseuille_manifest.json`
+
+See [POISEUILLE.md](POISEUILLE.md) for the public pressure-driven channel-flow benchmark.
 
 ![Validation trace](assets/validation_trace.svg)
