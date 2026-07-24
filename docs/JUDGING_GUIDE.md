@@ -12,6 +12,7 @@ git clone https://github.com/kevmoz/polymathica-hackathon.git
 cd polymathica-hackathon
 python -m pip install -e .
 python -m polymathica_hackathon.suite --output demo
+python -m polymathica_hackathon.verify --root demo --report demo/verification_report.json
 python -m unittest discover -s tests
 ```
 
@@ -35,6 +36,7 @@ For the numerical evidence at a glance, open [BENCHMARK_MATRIX.md](BENCHMARK_MAT
 - public gallery and release videos
 - CI workflow for repeatable test execution
 - API/reference documentation for public commands and callable functions
+- independent verification command for evidence-suite hashes, statuses and provenance
 - negative-path tests that reject invalid configs, failed validation archives and tampered artifacts
 - small public Taylor-Green benchmark solver with analytic reference comparison
 - grid-convergence evidence showing observed second-order behavior

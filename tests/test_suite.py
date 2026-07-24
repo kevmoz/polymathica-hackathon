@@ -16,7 +16,7 @@ class EvidenceSuiteTests(unittest.TestCase):
             self.assertEqual(result.taylor_green_status, "passed")
             self.assertEqual(result.projection_status, "passed")
             self.assertEqual(result.poiseuille_status, "passed")
-            self.assertEqual(result.tests_expected, 30)
+            self.assertEqual(result.tests_expected, 34)
             self.assertTrue(result.summary_path.exists())
             self.assertTrue(result.manifest_path.exists())
 

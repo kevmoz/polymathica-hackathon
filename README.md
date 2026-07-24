@@ -13,6 +13,7 @@ A governed scientific workflow that converts a configured Navier-Stokes experime
 - Scorecard response: [docs/SCORECARD_RESPONSE.md](docs/SCORECARD_RESPONSE.md)
 - Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 - API reference: [docs/API_REFERENCE.md](docs/API_REFERENCE.md)
+- Verification dossier: [docs/VERIFICATION.md](docs/VERIFICATION.md)
 - Validation notes: [docs/VALIDATION.md](docs/VALIDATION.md)
 - Public benchmark solver: [docs/BENCHMARK.md](docs/BENCHMARK.md)
 - Benchmark matrix: [docs/BENCHMARK_MATRIX.md](docs/BENCHMARK_MATRIX.md)
@@ -44,6 +45,7 @@ git clone https://github.com/kevmoz/polymathica-hackathon.git
 cd polymathica-hackathon
 python -m pip install -e .
 python -m polymathica_hackathon.suite --output demo
+python -m polymathica_hackathon.verify --root demo --report demo/verification_report.json
 python -m unittest discover -s tests
 ```
 
@@ -87,6 +89,7 @@ PYTHONPATH=src python -m polymathica_hackathon.cli --output demo/output
 - Poiseuille report: [demo/poiseuille/poiseuille_report.html](demo/poiseuille/poiseuille_report.html)
 - Complete evidence suite summary: [demo/evidence_suite_summary.json](demo/evidence_suite_summary.json)
 - Complete evidence suite manifest: [demo/evidence_suite_manifest.json](demo/evidence_suite_manifest.json)
+- Verification report: [demo/verification_report.json](demo/verification_report.json)
 
 Benchmark summary:
 

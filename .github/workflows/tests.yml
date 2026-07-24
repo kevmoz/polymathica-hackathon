@@ -24,5 +24,7 @@ jobs:
         run: python -m polymathica_hackathon.poiseuille --output demo/poiseuille
       - name: Run complete evidence suite
         run: python -m polymathica_hackathon.suite --output demo
+      - name: Verify complete evidence bundle
+        run: python -m polymathica_hackathon.verify --root demo --report demo/verification_report.json
       - name: Run tests
         run: python -m unittest discover -s tests

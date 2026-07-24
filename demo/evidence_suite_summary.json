@@ -32,6 +32,7 @@
   },
   "reviewer_commands": [
     "python -m polymathica_hackathon.suite --output demo",
+    "python -m polymathica_hackathon.verify --root demo --report demo/verification_report.json",
     "python -m unittest discover -s tests"
   ],
   "schema": "polymathica.evidence_suite.summary.v1",

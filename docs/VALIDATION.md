@@ -20,6 +20,7 @@ Run locally:
 
 ```bash
 python -m polymathica_hackathon.suite --output demo
+python -m polymathica_hackathon.verify --root demo --report demo/verification_report.json
 python -m unittest discover -s tests
 ```
 
@@ -37,6 +38,7 @@ Generated evidence:
 
 - `demo/evidence_suite_summary.json`
 - `demo/evidence_suite_manifest.json`
+- `demo/verification_report.json`
 - `demo/output/experiment_config.json`
 - `demo/output/replay_samples.json`
 - `demo/output/validation_report.json`

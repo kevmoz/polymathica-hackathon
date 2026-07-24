@@ -84,6 +84,7 @@ def run_evidence_suite(output_dir: Path = DEFAULT_SUITE_DIR) -> EvidenceSuiteRes
         },
         "reviewer_commands": [
             "python -m polymathica_hackathon.suite --output demo",
+            "python -m polymathica_hackathon.verify --root demo --report demo/verification_report.json",
             "python -m unittest discover -s tests",
         ],
     }
@@ -116,7 +117,7 @@ def run_evidence_suite(output_dir: Path = DEFAULT_SUITE_DIR) -> EvidenceSuiteRes
         taylor_green_status=taylor_green.status,
         projection_status=projection.status,
         poiseuille_status=poiseuille.status,
-        tests_expected=30,
+        tests_expected=34,
         summary_path=summary_path,
         manifest_path=manifest_path,
     )

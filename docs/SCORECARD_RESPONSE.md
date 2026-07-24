@@ -8,6 +8,7 @@ This repository directly addresses the most important judge-readiness concerns:
 | Claims without verification | Validation report, provenance hashes, archive manifest and report are committed. |
 | Unclear run path | README and judging guide include direct run commands. |
 | Need one-command review path | `python -m polymathica_hackathon.suite --output demo` runs the public workflow and all benchmark families, then writes aggregate evidence artifacts. |
+| Need independent verification | `python -m polymathica_hackathon.verify --root demo --report demo/verification_report.json` recomputes artifact hashes and checks component statuses. |
 | Replay vs live solver ambiguity | Public demo scope states this is a deterministic replay evidence workflow. |
 | Weak governance evidence | Tests cover invalid config rejection, archive blocking, missing artifacts and hash tampering. |
 | System ownership ambiguity | README and architecture docs define POLYMATHICA, PSIC, Graphics Core and Olana roles. |

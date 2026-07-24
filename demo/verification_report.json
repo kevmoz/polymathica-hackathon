@@ -1,0 +1,55 @@
+{
+  "artifacts": [
+    {
+      "artifact": "benchmark/benchmark_validation.json",
+      "sha256": "fc993f7259fa8191ee9ec874315d42466a1c0125723bec11f307269cbdfabe10",
+      "status": "passed"
+    },
+    {
+      "artifact": "benchmark/convergence_study.json",
+      "sha256": "068aa262f39cbfa9e940119d98d2b75d1b3de4b7512de6f03d436b6ef0adf021",
+      "status": "passed"
+    },
+    {
+      "artifact": "evidence_suite_summary.json",
+      "sha256": "d7fa901e05361bd041e5d7dd0fc75fc0fd76d3b84a1e2d177c96abedf1aac294",
+      "status": "passed"
+    },
+    {
+      "artifact": "output/archive_manifest.json",
+      "sha256": "abb916ba7cd3960af3f67064138811e3f36df05ec0e04e1476b922d2a7deacb1",
+      "status": "passed"
+    },
+    {
+      "artifact": "output/provenance.json",
+      "sha256": "a3d3f35f1e32238eeec617e42da13c7f2677840e06c0e8bef25bb47def777210",
+      "status": "passed"
+    },
+    {
+      "artifact": "poiseuille/poiseuille_convergence.json",
+      "sha256": "096280fa15c642e0ebdf4cdb7cac6e3173623ea72a7783d00b20b6ae6403718e",
+      "status": "passed"
+    },
+    {
+      "artifact": "poiseuille/poiseuille_validation.json",
+      "sha256": "5098cb45499dd1d85c1b2087eef6443b83dcc89a837ab1ee0a3791498bb22ca0",
+      "status": "passed"
+    },
+    {
+      "artifact": "projection/projection_validation.json",
+      "sha256": "8b4782a92d99e51899f47e1eb46847930e5cf2c0fc76b5527153579909e089dd",
+      "status": "passed"
+    }
+  ],
+  "artifacts_checked": 8,
+  "components": {
+    "poiseuille": "passed",
+    "projection": "passed",
+    "taylor_green": "passed",
+    "workflow": "passed"
+  },
+  "components_checked": 4,
+  "evidence_root": "demo",
+  "schema": "polymathica.evidence_verification.report.v1",
+  "status": "passed"
+}

@@ -9,6 +9,7 @@ The package intentionally exposes a small set of auditable functions and command
 | Command | Purpose | Main Artifacts |
 | --- | --- | --- |
 | `python -m polymathica_hackathon.suite --output demo` | Runs the full public evidence suite | `demo/evidence_suite_summary.json`, `demo/evidence_suite_manifest.json` |
+| `python -m polymathica_hackathon.verify --root demo --report demo/verification_report.json` | Verifies manifest hashes and component statuses | `demo/verification_report.json` |
 | `python -m polymathica_hackathon.cli --output demo/output` | Runs governed deterministic replay workflow | `validation_report.json`, `provenance.json`, `archive_manifest.json` |
 | `python -m polymathica_hackathon.benchmark --output demo/benchmark` | Runs Taylor-Green viscous-decay benchmark | `benchmark_validation.json`, `convergence_study.json` |
 | `python -m polymathica_hackathon.projection --output demo/projection` | Runs known-mode pressure-projection benchmark | `projection_validation.json`, `projection_manifest.json` |
@@ -38,6 +39,25 @@ Runs the complete public package:
 - `tests_expected`
 - `summary_path`
 - `manifest_path`
+
+## `polymathica_hackathon.verify`
+
+`verify_evidence_bundle(root: Path = Path("demo"), report_path: Path | None = None) -> VerificationResult`
+
+Verifies the generated evidence suite by recomputing manifest hashes, checking component statuses and verifying workflow provenance hashes.
+
+`VerificationResult` fields:
+
+- `evidence_root`
+- `status`
+- `artifacts_checked`
+- `components_checked`
+- `report_path`
+
+Important helpers:
+
+- `verify_hashes(root: Path, manifest: dict) -> list[dict[str, str]]`
+- `verify_component_statuses(root: Path, summary: dict) -> dict[str, str]`
 
 ## `polymathica_hackathon.workflow`
 

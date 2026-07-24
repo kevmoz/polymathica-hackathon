@@ -16,6 +16,7 @@ configured experiment -> governed execution -> validation gates -> visual eviden
 - artifact hashing and provenance records
 - CI execution on GitHub Actions
 - public API and command reference
+- independent verification dossier and hash-check command
 - three compact numerical benchmark families
 - analytic reference comparisons
 - convergence evidence for Taylor-Green and Poiseuille cases
@@ -34,6 +35,7 @@ Hackathon judges need a fast path from claim to evidence. This repository keeps 
 ```bash
 python -m pip install -e .
 python -m polymathica_hackathon.suite --output demo
+python -m polymathica_hackathon.verify --root demo --report demo/verification_report.json
 python -m unittest discover -s tests
 ```
 
