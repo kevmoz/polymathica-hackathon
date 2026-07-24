@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
-"""Script to help organize and prepare videos for GitHub Release"""
+"""Organize and prepare videos for the GitHub Release."""
 
+import argparse
 import os
-import sys
+import shutil
 from pathlib import Path
-from typing import List, Tuple
+from typing import List, Optional, Tuple
+
+REPO = "kevmoz/polymathica-hackathon"
+TAG = "v1.0.0-hackathon"
+DEFAULT_BASE_PATH = r"D:\Polymathica\ACTIVE_REPO\runtime_outputs"
+RELEASE_ASSET_DIR = Path("release_assets")
 
 VIDEO_SOURCES = [
     {
@@ -51,7 +57,7 @@ VIDEO_SOURCES = [
     },
 ]
 
-def verify_videos(base_path: str) -> List[Tuple[str, bool]]:
+def verify_videos(base_path: str) -> List[Tuple[str, bool, Optional[str]]]:
     """
     Verify all video files exist.
     
@@ -59,7 +65,7 @@ def verify_videos(base_path: str) -> List[Tuple[str, bool]]:
         base_path: Base directory on D: drive
         
     Returns:
-        List of (video_name, exists) tuples
+        List of (video_name, exists, path) tuples
     """
     results = []
     for video in VIDEO_SOURCES:
@@ -68,7 +74,22 @@ def verify_videos(base_path: str) -> List[Tuple[str, bool]]:
         results.append((video["name"], exists, full_path if exists else None))
     return results
 
-def print_upload_commands(base_path: str) -> None:
+def prepare_release_assets(base_path: str, output_dir: Path = RELEASE_ASSET_DIR) -> List[Path]:
+    """Copy found videos to release asset filenames used by the gallery."""
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    copied = []
+    for video in VIDEO_SOURCES:
+        source = Path(base_path) / video["path"]
+        if not source.is_file():
+            continue
+        target = output_dir / video["release_name"]
+        shutil.copy2(source, target)
+        copied.append(target)
+    return copied
+
+
+def print_upload_commands() -> None:
     """
     Print gh release upload commands.
     
@@ -79,18 +100,19 @@ def print_upload_commands(base_path: str) -> None:
     print("GitHub Release Upload Commands")
     print("="*70 + "\n")
     
-    print("Step 1: Create release")
-    print("""gh release create v1.0.0-hackathon \\
+    print("Step 1: Create release if it does not already exist")
+    print(f"""gh release create {TAG} \\
   --title "POLYMATHICA Hackathon Submission" \\
-  --notes "Complete autonomous scientific laboratory with real GPU-accelerated simulations"\n""")
+  --notes "Complete autonomous scientific laboratory with real GPU-accelerated simulations" \\
+  --repo {REPO}\n""")
     
-    print("Step 2: Upload all videos")
-    print("""gh release upload v1.0.0-hackathon \\""")
+    print("Step 2: Upload all prepared videos")
+    print(f"""gh release upload {TAG} \\""")
     
     for video in VIDEO_SOURCES:
-        full_path = os.path.join(base_path, video["path"])
+        full_path = RELEASE_ASSET_DIR / video["release_name"]
         print(f"  '{full_path}' \\")
-    print()
+    print(f"  --repo {REPO} --clobber\n")
 
 def generate_html_gallery(output_path: str) -> None:
     """
@@ -116,7 +138,7 @@ def generate_html_gallery(output_path: str) -> None:
     </style>
 </head>
 <body>
-    <h1>🔬 POLYMATHICA Video Gallery</h1>
+    <h1>POLYMATHICA Video Gallery</h1>
     <div class="videos">
 '''
     
@@ -125,22 +147,27 @@ def generate_html_gallery(output_path: str) -> None:
             <div class="video-title">{video['name']}</div>
             <div class="video-description">{video['description']}</div>
             <video controls>
-                <source src="https://github.com/kevmoz/polymathica-hackathon/releases/download/v1.0.0-hackathon/{video['release_name']}" type="video/mp4">
+                <source src="https://github.com/{REPO}/releases/download/{TAG}/{video['release_name']}" type="video/mp4">
                 Your browser does not support video playback.
             </video>
-            <p><a href="https://github.com/kevmoz/polymathica-hackathon/releases/download/v1.0.0-hackathon/{video['release_name']}">Download Video</a></p>
+            <p><a href="https://github.com/{REPO}/releases/download/{TAG}/{video['release_name']}">Download Video</a></p>
         </div>\n'''
     
     html_content += '''    </div>
 </body>
 </html>'''
     
-    with open(output_path, 'w') as f:
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, 'w', encoding='utf-8') as f:
         f.write(html_content)
     print(f"Gallery HTML written to {output_path}")
 
 def main():
     """Main entry point"""
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--base-path", default=DEFAULT_BASE_PATH)
+    parser.add_argument("--yes", action="store_true", help="Generate gallery without prompting")
+    args = parser.parse_args()
     
     print("="*70)
     print("POLYMATHICA Video Organization Tool")
@@ -148,7 +175,7 @@ def main():
     
     # Verify videos
     print("Checking video files...\n")
-    base_path = r"D:\Polymathica\ACTIVE_REPO\runtime_outputs"
+    base_path = args.base_path
     
     results = verify_videos(base_path)
     
@@ -156,7 +183,7 @@ def main():
     missing = 0
     
     for name, exists, path in results:
-        status = "✓ FOUND" if exists else "✗ MISSING"
+        status = "FOUND" if exists else "MISSING"
         print(f"{status:12s} {name}")
         if exists:
             size_mb = os.path.getsize(path) / (1024**2)
@@ -168,16 +195,24 @@ def main():
     print(f"\nTotal: {found} found, {missing} missing\n")
     
     if found > 0:
-        print_upload_commands(base_path)
-        print("\nGenerate HTML gallery? (y/n): ", end="")
-        if input().lower() == 'y':
+        copied = prepare_release_assets(base_path)
+        print(f"Prepared {len(copied)} release assets in {RELEASE_ASSET_DIR}\n")
+        print_upload_commands()
+
+        should_generate = args.yes
+        if not should_generate:
+            print("\nGenerate HTML gallery? (y/n): ", end="")
+            should_generate = input().lower() == 'y'
+        if should_generate:
+            generate_html_gallery("index.html")
+            generate_html_gallery("docs/index.html")
             generate_html_gallery("docs/assets/video-gallery.html")
     
     print("\n" + "="*70)
     print("Next Steps:")
     print("1. Copy-paste the upload commands above")
-    print("2. Run: gh release create v1.0.0-hackathon ...")
-    print("3. Run: gh release upload v1.0.0-hackathon ...")
+    print(f"2. Run: gh release create {TAG} ...")
+    print(f"3. Run: gh release upload {TAG} ...")
     print("4. Videos will appear on GitHub Releases page")
     print("="*70)
 

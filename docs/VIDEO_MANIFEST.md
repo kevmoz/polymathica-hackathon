@@ -107,22 +107,24 @@ This manifest maps the actual POLYMATHICA videos for judge evaluation.
 ```bash
 gh release create v1.0.0-hackathon \
   --title "POLYMATHICA Hackathon Submission" \
-  --notes "Complete autonomous scientific laboratory with real simulations"
+  --notes "Complete autonomous scientific laboratory with real simulations" \
+  --repo kevmoz/polymathica-hackathon
 ```
 
 ### Step 2: Upload Videos
 
 ```bash
-cd D:\Polymathica\ACTIVE_REPO\runtime_outputs
+cd D:\Polymathica\polymathica-hackathon
 
 gh release upload v1.0.0-hackathon \
-  v493_60s_cinematic_reel/polymathica_60s_cinematic.mp4 \
-  v482_ns_cinematic_video/polymathica_navier_stokes_cinematic.mp4 \
-  v478_postfx_export/polymathica_postfx_reel.mp4 \
-  v477_video_export/polymathica_ns_reel.mp4 \
-  governed_graphics_core/ns3d-v64-cuda-nvenc-60s/run-v64-60s-001/video.mp4 \
-  v525_operational_recovery/ns2d/V526-NS2D-SHARP-001/v525_ns2d_lid_replay.mp4 \
-  ns_lab/1096fbff-0419-468b-be9d-d550e53098c4/simulation.mp4
+  release_assets/polymathica_60s_cinematic.mp4 \
+  release_assets/polymathica_ns_cinematic.mp4 \
+  release_assets/polymathica_graphics_core_postfx.mp4 \
+  release_assets/polymathica_ns_results.mp4 \
+  release_assets/polymathica_3d_gpu_cuda_60s.mp4 \
+  release_assets/polymathica_2d_validation_replay.mp4 \
+  release_assets/polymathica_lab_workflow.mp4 \
+  --repo kevmoz/polymathica-hackathon --clobber
 ```
 
 ### Step 3: Update Video Gallery
@@ -150,12 +152,12 @@ Embedded on GitHub Pages gallery with direct download links.
 ```
 GitHub Release: v1.0.0-hackathon
 ├── polymathica_60s_cinematic.mp4 (System Overview)
-├── polymathica_navier_stokes_cinematic.mp4 (NS Demo)
-├── polymathica_postfx_reel.mp4 (Graphics Core)
+├── polymathica_ns_cinematic.mp4 (NS Demo)
+├── polymathica_graphics_core_postfx.mp4 (Graphics Core)
 ├── polymathica_ns_reel.mp4 (Results)
-├── video.mp4 (3D CUDA/NVENC - 60s)
-├── v525_ns2d_lid_replay.mp4 (2D Validation)
-├── simulation.mp4 (Lab Workflow)
+├── polymathica_3d_gpu_cuda_60s.mp4 (3D CUDA/NVENC - 60s)
+├── polymathica_2d_validation_replay.mp4 (2D Validation)
+├── polymathica_lab_workflow.mp4 (Lab Workflow)
 └── README with playback instructions
 ```
 
