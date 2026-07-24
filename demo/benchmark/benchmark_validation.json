@@ -1,0 +1,16 @@
+{
+  "metrics": {
+    "l2_error": 4.5146209629361505e-06,
+    "max_error": 6.384638195133796e-06
+  },
+  "reference": {
+    "u": "sin(x) * cos(y) * exp(-2*nu*t)",
+    "v": "-cos(x) * sin(y) * exp(-2*nu*t)"
+  },
+  "schema": "polymathica.benchmark.validation.v1",
+  "status": "passed",
+  "tolerances": {
+    "l2_tolerance": 0.0002,
+    "max_tolerance": 0.0004
+  }
+}

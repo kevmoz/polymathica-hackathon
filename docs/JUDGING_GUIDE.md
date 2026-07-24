@@ -11,6 +11,7 @@ git clone https://github.com/kevmoz/polymathica-hackathon.git
 cd polymathica-hackathon
 python -m pip install -e .
 python -m polymathica_hackathon.cli --output demo/output
+python -m polymathica_hackathon.benchmark --output demo/benchmark
 python -m unittest discover -s tests
 ```
 
@@ -22,6 +23,7 @@ python -m unittest discover -s tests
 - public gallery and release videos
 - CI workflow for repeatable test execution
 - negative-path tests that reject invalid configs, failed validation archives and tampered artifacts
+- small public Taylor-Green benchmark solver with analytic reference comparison
 
 ## Public Demo Scope
 

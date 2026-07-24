@@ -13,6 +13,7 @@ authors = [{name = "Kevin Smith"}]
 
 [project.scripts]
 polymathica-demo = "polymathica_hackathon.cli:main"
+polymathica-benchmark = "polymathica_hackathon.benchmark:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

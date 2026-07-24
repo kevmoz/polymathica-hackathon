@@ -1,0 +1,12 @@
+{
+  "artifacts": {
+    "benchmark_config.json": "46f36629be76313caca9a07c51b6c6a9a42c99728f4810d9d9a87c4859d63e85",
+    "benchmark_report.html": "8911ac3de058aafd03e695b68b973a782339d9d6ac29d1d57f02e16abc386232",
+    "benchmark_trace.svg": "a58843d156261f79f86fd14e54eca8b826627f26a3495883769f36977a4ebba7",
+    "benchmark_validation.json": "c4f346443c949a0bfd8f7d6d649629925261c78390873651904cb4131b7c9e40",
+    "energy_history.json": "75adaa180db2d0dec32235fad1b949fb3661f9fc4d127fc583be9e95f7bfc310"
+  },
+  "benchmark_id": "TAYLOR-GREEN-VORTEX-VISCOUS-DECAY",
+  "schema": "polymathica.benchmark.archive.v1",
+  "status": "passed"
+}

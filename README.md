@@ -12,6 +12,7 @@ A governed scientific workflow that converts a configured Navier-Stokes experime
 - Scorecard response: [docs/SCORECARD_RESPONSE.md](docs/SCORECARD_RESPONSE.md)
 - Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 - Validation notes: [docs/VALIDATION.md](docs/VALIDATION.md)
+- Public benchmark solver: [docs/BENCHMARK.md](docs/BENCHMARK.md)
 
 ## Demonstrated Workflow
 
@@ -27,7 +28,7 @@ This repository demonstrates the governed evidence workflow using a deterministi
 
 It does not contain the complete private POLYMATHICA solver, PSIC, Graphics Core or Olana development repositories.
 
-The public demo verifies orchestration, configuration governance, validation gates, scientific visualisation, report generation, provenance hashing, artifact integrity checks and archive creation. The release videos show larger GPU/rendering outputs prepared from the broader POLYMATHICA workspace.
+The public demo verifies orchestration, configuration governance, validation gates, scientific visualisation, report generation, provenance hashing, artifact integrity checks and archive creation. It also includes one modest Taylor-Green benchmark solver with an analytic reference comparison. The release videos show larger GPU/rendering outputs prepared from the broader POLYMATHICA workspace.
 
 ## Run In Three Commands
 
@@ -36,6 +37,7 @@ git clone https://github.com/kevmoz/polymathica-hackathon.git
 cd polymathica-hackathon
 python -m pip install -e .
 python -m polymathica_hackathon.cli --output demo/output
+python -m polymathica_hackathon.benchmark --output demo/benchmark
 python -m unittest discover -s tests
 ```
 
@@ -58,6 +60,9 @@ PYTHONPATH=src python -m polymathica_hackathon.cli --output demo/output
 - Archive manifest: [demo/output/archive_manifest.json](demo/output/archive_manifest.json)
 - HTML report: [demo/output/report.html](demo/output/report.html)
 - Scientific visualisation: [demo/output/validation_trace.svg](demo/output/validation_trace.svg)
+- Benchmark solver: [src/polymathica_hackathon/benchmark.py](src/polymathica_hackathon/benchmark.py)
+- Benchmark validation: [demo/benchmark/benchmark_validation.json](demo/benchmark/benchmark_validation.json)
+- Benchmark report: [demo/benchmark/benchmark_report.html](demo/benchmark/benchmark_report.html)
 
 ## Core Systems
 

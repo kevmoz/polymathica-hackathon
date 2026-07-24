@@ -1,0 +1,509 @@
+{
+  "history": [
+    {
+      "kinetic_energy": 0.25,
+      "step": 0,
+      "time": 0.0
+    },
+    {
+      "kinetic_energy": 0.249990032186,
+      "step": 1,
+      "time": 0.001
+    },
+    {
+      "kinetic_energy": 0.249980064769,
+      "step": 2,
+      "time": 0.002
+    },
+    {
+      "kinetic_energy": 0.249970097749,
+      "step": 3,
+      "time": 0.003
+    },
+    {
+      "kinetic_energy": 0.249960131127,
+      "step": 4,
+      "time": 0.004
+    },
+    {
+      "kinetic_energy": 0.249950164903,
+      "step": 5,
+      "time": 0.005
+    },
+    {
+      "kinetic_energy": 0.249940199075,
+      "step": 6,
+      "time": 0.006
+    },
+    {
+      "kinetic_energy": 0.249930233645,
+      "step": 7,
+      "time": 0.007
+    },
+    {
+      "kinetic_energy": 0.249920268613,
+      "step": 8,
+      "time": 0.008
+    },
+    {
+      "kinetic_energy": 0.249910303978,
+      "step": 9,
+      "time": 0.009
+    },
+    {
+      "kinetic_energy": 0.24990033974,
+      "step": 10,
+      "time": 0.01
+    },
+    {
+      "kinetic_energy": 0.249890375899,
+      "step": 11,
+      "time": 0.011
+    },
+    {
+      "kinetic_energy": 0.249880412455,
+      "step": 12,
+      "time": 0.012
+    },
+    {
+      "kinetic_energy": 0.249870449409,
+      "step": 13,
+      "time": 0.013
+    },
+    {
+      "kinetic_energy": 0.24986048676,
+      "step": 14,
+      "time": 0.014
+    },
+    {
+      "kinetic_energy": 0.249850524509,
+      "step": 15,
+      "time": 0.015
+    },
+    {
+      "kinetic_energy": 0.249840562654,
+      "step": 16,
+      "time": 0.016
+    },
+    {
+      "kinetic_energy": 0.249830601197,
+      "step": 17,
+      "time": 0.017
+    },
+    {
+      "kinetic_energy": 0.249820640137,
+      "step": 18,
+      "time": 0.018
+    },
+    {
+      "kinetic_energy": 0.249810679474,
+      "step": 19,
+      "time": 0.019
+    },
+    {
+      "kinetic_energy": 0.249800719208,
+      "step": 20,
+      "time": 0.02
+    },
+    {
+      "kinetic_energy": 0.249790759339,
+      "step": 21,
+      "time": 0.021
+    },
+    {
+      "kinetic_energy": 0.249780799868,
+      "step": 22,
+      "time": 0.022
+    },
+    {
+      "kinetic_energy": 0.249770840793,
+      "step": 23,
+      "time": 0.023
+    },
+    {
+      "kinetic_energy": 0.249760882116,
+      "step": 24,
+      "time": 0.024
+    },
+    {
+      "kinetic_energy": 0.249750923835,
+      "step": 25,
+      "time": 0.025
+    },
+    {
+      "kinetic_energy": 0.249740965952,
+      "step": 26,
+      "time": 0.026
+    },
+    {
+      "kinetic_energy": 0.249731008466,
+      "step": 27,
+      "time": 0.027
+    },
+    {
+      "kinetic_energy": 0.249721051376,
+      "step": 28,
+      "time": 0.028
+    },
+    {
+      "kinetic_energy": 0.249711094684,
+      "step": 29,
+      "time": 0.029
+    },
+    {
+      "kinetic_energy": 0.249701138389,
+      "step": 30,
+      "time": 0.03
+    },
+    {
+      "kinetic_energy": 0.249691182491,
+      "step": 31,
+      "time": 0.031
+    },
+    {
+      "kinetic_energy": 0.249681226989,
+      "step": 32,
+      "time": 0.032
+    },
+    {
+      "kinetic_energy": 0.249671271885,
+      "step": 33,
+      "time": 0.033
+    },
+    {
+      "kinetic_energy": 0.249661317177,
+      "step": 34,
+      "time": 0.034
+    },
+    {
+      "kinetic_energy": 0.249651362867,
+      "step": 35,
+      "time": 0.035
+    },
+    {
+      "kinetic_energy": 0.249641408953,
+      "step": 36,
+      "time": 0.036
+    },
+    {
+      "kinetic_energy": 0.249631455436,
+      "step": 37,
+      "time": 0.037
+    },
+    {
+      "kinetic_energy": 0.249621502316,
+      "step": 38,
+      "time": 0.038
+    },
+    {
+      "kinetic_energy": 0.249611549593,
+      "step": 39,
+      "time": 0.039
+    },
+    {
+      "kinetic_energy": 0.249601597267,
+      "step": 40,
+      "time": 0.04
+    },
+    {
+      "kinetic_energy": 0.249591645338,
+      "step": 41,
+      "time": 0.041
+    },
+    {
+      "kinetic_energy": 0.249581693805,
+      "step": 42,
+      "time": 0.042
+    },
+    {
+      "kinetic_energy": 0.249571742669,
+      "step": 43,
+      "time": 0.043
+    },
+    {
+      "kinetic_energy": 0.24956179193,
+      "step": 44,
+      "time": 0.044
+    },
+    {
+      "kinetic_energy": 0.249551841588,
+      "step": 45,
+      "time": 0.045
+    },
+    {
+      "kinetic_energy": 0.249541891642,
+      "step": 46,
+      "time": 0.046
+    },
+    {
+      "kinetic_energy": 0.249531942093,
+      "step": 47,
+      "time": 0.047
+    },
+    {
+      "kinetic_energy": 0.249521992941,
+      "step": 48,
+      "time": 0.048
+    },
+    {
+      "kinetic_energy": 0.249512044185,
+      "step": 49,
+      "time": 0.049
+    },
+    {
+      "kinetic_energy": 0.249502095826,
+      "step": 50,
+      "time": 0.05
+    },
+    {
+      "kinetic_energy": 0.249492147864,
+      "step": 51,
+      "time": 0.051
+    },
+    {
+      "kinetic_energy": 0.249482200299,
+      "step": 52,
+      "time": 0.052
+    },
+    {
+      "kinetic_energy": 0.24947225313,
+      "step": 53,
+      "time": 0.053
+    },
+    {
+      "kinetic_energy": 0.249462306357,
+      "step": 54,
+      "time": 0.054
+    },
+    {
+      "kinetic_energy": 0.249452359982,
+      "step": 55,
+      "time": 0.055
+    },
+    {
+      "kinetic_energy": 0.249442414002,
+      "step": 56,
+      "time": 0.056
+    },
+    {
+      "kinetic_energy": 0.24943246842,
+      "step": 57,
+      "time": 0.057
+    },
+    {
+      "kinetic_energy": 0.249422523234,
+      "step": 58,
+      "time": 0.058
+    },
+    {
+      "kinetic_energy": 0.249412578444,
+      "step": 59,
+      "time": 0.059
+    },
+    {
+      "kinetic_energy": 0.249402634051,
+      "step": 60,
+      "time": 0.06
+    },
+    {
+      "kinetic_energy": 0.249392690054,
+      "step": 61,
+      "time": 0.061
+    },
+    {
+      "kinetic_energy": 0.249382746454,
+      "step": 62,
+      "time": 0.062
+    },
+    {
+      "kinetic_energy": 0.249372803251,
+      "step": 63,
+      "time": 0.063
+    },
+    {
+      "kinetic_energy": 0.249362860444,
+      "step": 64,
+      "time": 0.064
+    },
+    {
+      "kinetic_energy": 0.249352918033,
+      "step": 65,
+      "time": 0.065
+    },
+    {
+      "kinetic_energy": 0.249342976019,
+      "step": 66,
+      "time": 0.066
+    },
+    {
+      "kinetic_energy": 0.249333034401,
+      "step": 67,
+      "time": 0.067
+    },
+    {
+      "kinetic_energy": 0.249323093179,
+      "step": 68,
+      "time": 0.068
+    },
+    {
+      "kinetic_energy": 0.249313152354,
+      "step": 69,
+      "time": 0.069
+    },
+    {
+      "kinetic_energy": 0.249303211925,
+      "step": 70,
+      "time": 0.07
+    },
+    {
+      "kinetic_energy": 0.249293271893,
+      "step": 71,
+      "time": 0.071
+    },
+    {
+      "kinetic_energy": 0.249283332257,
+      "step": 72,
+      "time": 0.072
+    },
+    {
+      "kinetic_energy": 0.249273393017,
+      "step": 73,
+      "time": 0.073
+    },
+    {
+      "kinetic_energy": 0.249263454173,
+      "step": 74,
+      "time": 0.074
+    },
+    {
+      "kinetic_energy": 0.249253515726,
+      "step": 75,
+      "time": 0.075
+    },
+    {
+      "kinetic_energy": 0.249243577675,
+      "step": 76,
+      "time": 0.076
+    },
+    {
+      "kinetic_energy": 0.24923364002,
+      "step": 77,
+      "time": 0.077
+    },
+    {
+      "kinetic_energy": 0.249223702762,
+      "step": 78,
+      "time": 0.078
+    },
+    {
+      "kinetic_energy": 0.249213765899,
+      "step": 79,
+      "time": 0.079
+    },
+    {
+      "kinetic_energy": 0.249203829433,
+      "step": 80,
+      "time": 0.08
+    },
+    {
+      "kinetic_energy": 0.249193893363,
+      "step": 81,
+      "time": 0.081
+    },
+    {
+      "kinetic_energy": 0.249183957689,
+      "step": 82,
+      "time": 0.082
+    },
+    {
+      "kinetic_energy": 0.249174022412,
+      "step": 83,
+      "time": 0.083
+    },
+    {
+      "kinetic_energy": 0.24916408753,
+      "step": 84,
+      "time": 0.084
+    },
+    {
+      "kinetic_energy": 0.249154153045,
+      "step": 85,
+      "time": 0.085
+    },
+    {
+      "kinetic_energy": 0.249144218956,
+      "step": 86,
+      "time": 0.086
+    },
+    {
+      "kinetic_energy": 0.249134285262,
+      "step": 87,
+      "time": 0.087
+    },
+    {
+      "kinetic_energy": 0.249124351965,
+      "step": 88,
+      "time": 0.088
+    },
+    {
+      "kinetic_energy": 0.249114419064,
+      "step": 89,
+      "time": 0.089
+    },
+    {
+      "kinetic_energy": 0.249104486559,
+      "step": 90,
+      "time": 0.09
+    },
+    {
+      "kinetic_energy": 0.24909455445,
+      "step": 91,
+      "time": 0.091
+    },
+    {
+      "kinetic_energy": 0.249084622737,
+      "step": 92,
+      "time": 0.092
+    },
+    {
+      "kinetic_energy": 0.24907469142,
+      "step": 93,
+      "time": 0.093
+    },
+    {
+      "kinetic_energy": 0.249064760499,
+      "step": 94,
+      "time": 0.094
+    },
+    {
+      "kinetic_energy": 0.249054829974,
+      "step": 95,
+      "time": 0.095
+    },
+    {
+      "kinetic_energy": 0.249044899845,
+      "step": 96,
+      "time": 0.096
+    },
+    {
+      "kinetic_energy": 0.249034970111,
+      "step": 97,
+      "time": 0.097
+    },
+    {
+      "kinetic_energy": 0.249025040774,
+      "step": 98,
+      "time": 0.098
+    },
+    {
+      "kinetic_energy": 0.249015111833,
+      "step": 99,
+      "time": 0.099
+    },
+    {
+      "kinetic_energy": 0.249005183287,
+      "step": 100,
+      "time": 0.1
+    }
+  ]
+}

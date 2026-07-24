@@ -1,0 +1,25 @@
+{
+  "benchmark_id": "TAYLOR-GREEN-VORTEX-VISCOUS-DECAY",
+  "equation_family": "incompressible Navier-Stokes",
+  "grid": {
+    "domain": [
+      0.0,
+      6.283185307179586
+    ],
+    "n": 32
+  },
+  "parameters": {
+    "dt": 0.001,
+    "nu": 0.01,
+    "steps": 100
+  },
+  "public_scope": "small benchmark-backed solver example",
+  "reference": {
+    "u": "sin(x) * cos(y) * exp(-2*nu*t)",
+    "v": "-cos(x) * sin(y) * exp(-2*nu*t)"
+  },
+  "validation": {
+    "l2_tolerance": 0.0002,
+    "max_tolerance": 0.0004
+  }
+}

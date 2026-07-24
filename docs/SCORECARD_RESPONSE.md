@@ -10,5 +10,6 @@ This repository directly addresses the most important judge-readiness concerns:
 | Replay vs live solver ambiguity | Public demo scope states this is a deterministic replay evidence workflow. |
 | Weak governance proof | Tests cover invalid config rejection, archive blocking, missing artifacts and hash tampering. |
 | System ownership ambiguity | README and architecture docs define POLYMATHICA, PSIC, Graphics Core and Olana roles. |
+| Need benchmark-backed solver evidence | `src/polymathica_hackathon/benchmark.py` runs a Taylor-Green solver and compares against an analytic reference. |
 
 The current public package is intentionally compact: it is designed to be inspectable in minutes, while the release videos and gallery show larger simulation and rendering outputs from the broader POLYMATHICA workspace.
