@@ -44,7 +44,7 @@ Generated artifacts:
 
 ## Scope
 
-This is not the full private POLYMATHICA solver stack. It is a public, modest-resolution benchmark designed to prove that the submission contains a real executable numerical solver path with a documented reference comparison. See [PROJECTION.md](PROJECTION.md) and [POISEUILLE.md](POISEUILLE.md) for the complementary projection and channel-flow benchmarks.
+This is not the full private POLYMATHICA solver stack. It is a public, modest-resolution benchmark designed to demonstrate that the submission contains a real executable numerical solver path with a documented reference comparison. See [PROJECTION.md](PROJECTION.md) and [POISEUILLE.md](POISEUILLE.md) for the complementary projection and channel-flow benchmarks.
 
 ## Equation Context
 
@@ -55,6 +55,6 @@ du/dt = nu * Laplacian(u)
 dv/dt = nu * Laplacian(v)
 ```
 
-For the classical Taylor-Green vortex, the nonlinear advection terms are balanced by the analytic pressure field, leaving this exponential velocity decay as a valid velocity benchmark. This benchmark therefore proves the public finite-difference viscous-decay path, reference comparison, divergence tracking and convergence behavior. It should not be read as a general-purpose complete Navier-Stokes solver.
+For the classical Taylor-Green vortex, the nonlinear advection terms are balanced by the analytic pressure field, leaving this exponential velocity decay as a valid velocity benchmark. This benchmark therefore demonstrates the public finite-difference viscous-decay path, reference comparison, divergence tracking and convergence behavior. It should not be read as a general-purpose complete Navier-Stokes solver.
 
 ![Benchmark trace](../demo/benchmark/benchmark_trace.svg)

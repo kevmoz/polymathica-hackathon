@@ -9,6 +9,7 @@ A governed scientific workflow that converts a configured Navier-Stokes experime
 - GitHub Pages gallery: https://kevmoz.github.io/polymathica-hackathon
 - Release videos: https://github.com/kevmoz/polymathica-hackathon/releases/tag/v1.0.0-hackathon
 - Judging guide: [docs/JUDGING_GUIDE.md](docs/JUDGING_GUIDE.md)
+- Reviewer note: [docs/REVIEWER_NOTE.md](docs/REVIEWER_NOTE.md)
 - Scorecard response: [docs/SCORECARD_RESPONSE.md](docs/SCORECARD_RESPONSE.md)
 - Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 - Validation notes: [docs/VALIDATION.md](docs/VALIDATION.md)
@@ -24,6 +25,8 @@ Create -> Configure -> Run or Replay -> Validate -> Visualise -> Report -> Archi
 ```
 
 This repository is the compact public submission package for judges. It contains a runnable deterministic replay workflow, tests, CI configuration, generated evidence, documentation, and links to seven real simulation videos published as GitHub Release assets.
+
+We are not asking you to trust our vision. This repository is a compact, runnable evidence package that demonstrates the operating pattern behind the broader POLYMATHICA ecosystem.
 
 ## Public Demo Scope
 

@@ -3,8 +3,9 @@
 ## Fast Path
 
 1. Open the gallery: https://kevmoz.github.io/polymathica-hackathon
-2. Review the release videos: https://github.com/kevmoz/polymathica-hackathon/releases/tag/v1.0.0-hackathon
-3. Run the local evidence workflow:
+2. Read the scope note: [REVIEWER_NOTE.md](REVIEWER_NOTE.md)
+3. Review the release videos: https://github.com/kevmoz/polymathica-hackathon/releases/tag/v1.0.0-hackathon
+4. Run the local evidence workflow:
 
 ```bash
 git clone https://github.com/kevmoz/polymathica-hackathon.git

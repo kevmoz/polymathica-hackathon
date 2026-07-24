@@ -225,7 +225,7 @@ All videos available at Release:
 - Replay verification
 - Convergence analysis
 - Reference solution comparison
-- Reproducibility proof
+- Reproducibility evidence
 
 ### Video 7: Complete Workflow (Variable)
 - End-to-end experiment
