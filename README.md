@@ -13,6 +13,7 @@ A governed scientific workflow that converts a configured Navier-Stokes experime
 - Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 - Validation notes: [docs/VALIDATION.md](docs/VALIDATION.md)
 - Public benchmark solver: [docs/BENCHMARK.md](docs/BENCHMARK.md)
+- Pressure-projection benchmark: [docs/PROJECTION.md](docs/PROJECTION.md)
 
 ## Demonstrated Workflow
 
@@ -28,7 +29,7 @@ This repository demonstrates the governed evidence workflow using a deterministi
 
 It does not contain the complete private POLYMATHICA solver, PSIC, Graphics Core or Olana development repositories.
 
-The public demo verifies orchestration, configuration governance, validation gates, scientific visualisation, report generation, provenance hashing, artifact integrity checks and archive creation. It also includes one modest Taylor-Green benchmark solver with an analytic reference comparison. The release videos show larger GPU/rendering outputs prepared from the broader POLYMATHICA workspace.
+The public demo verifies orchestration, configuration governance, validation gates, scientific visualisation, report generation, provenance hashing, artifact integrity checks and archive creation. It also includes a Taylor-Green benchmark solver with analytic reference and convergence evidence, plus a known-mode pressure-projection benchmark. The release videos show larger GPU/rendering outputs prepared from the broader POLYMATHICA workspace.
 
 ## Run In Three Commands
 
@@ -38,6 +39,7 @@ cd polymathica-hackathon
 python -m pip install -e .
 python -m polymathica_hackathon.cli --output demo/output
 python -m polymathica_hackathon.benchmark --output demo/benchmark
+python -m polymathica_hackathon.projection --output demo/projection
 python -m unittest discover -s tests
 ```
 
@@ -64,6 +66,8 @@ PYTHONPATH=src python -m polymathica_hackathon.cli --output demo/output
 - Benchmark validation: [demo/benchmark/benchmark_validation.json](demo/benchmark/benchmark_validation.json)
 - Benchmark convergence study: [demo/benchmark/convergence_study.json](demo/benchmark/convergence_study.json)
 - Benchmark report: [demo/benchmark/benchmark_report.html](demo/benchmark/benchmark_report.html)
+- Projection validation: [demo/projection/projection_validation.json](demo/projection/projection_validation.json)
+- Projection report: [demo/projection/projection_report.html](demo/projection/projection_report.html)
 
 Benchmark summary:
 
@@ -73,6 +77,13 @@ Benchmark summary:
 - observed convergence order: `2.005`
 - final velocity L2 error: `4.514621e-06`
 - max divergence L2: `1.052400e-15`
+
+Projection summary:
+
+- known-mode periodic Helmholtz split
+- pressure/potential component recovered from divergence
+- divergence reduced from `1.241984e-01` to `6.678177e-16`
+- projected-field L2 error: `5.770979e-17`
 
 ## Core Systems
 

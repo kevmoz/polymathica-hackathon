@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-label="Pressure projection divergence reduction">
+  <rect width="900" height="360" fill="#0d1117"/>
+  <text x="70" y="48" fill="#f0f6fc" font-family="Arial" font-size="24">Pressure projection benchmark</text>
+  <rect x="80" y="110" width="260" height="120" fill="#8b949e"/>
+  <rect x="560" y="110" width="80" height="120" fill="#2f81f7"/>
+  <text x="80" y="260" fill="#c9d1d9" font-family="Arial" font-size="16">Before divergence L2: 1.242e-01</text>
+  <text x="560" y="260" fill="#c9d1d9" font-family="Arial" font-size="16">After: 6.678e-16</text>
+  <text x="70" y="310" fill="#8b949e" font-family="Arial" font-size="14">Known-mode Helmholtz split: velocity = divergence-free field + grad(phi), then project grad(phi) out.</text>
+</svg>

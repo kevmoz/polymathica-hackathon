@@ -12,6 +12,7 @@ cd polymathica-hackathon
 python -m pip install -e .
 python -m polymathica_hackathon.cli --output demo/output
 python -m polymathica_hackathon.benchmark --output demo/benchmark
+python -m polymathica_hackathon.projection --output demo/projection
 python -m unittest discover -s tests
 ```
 
@@ -26,6 +27,7 @@ python -m unittest discover -s tests
 - small public Taylor-Green benchmark solver with analytic reference comparison
 - grid-convergence evidence showing observed second-order behavior
 - divergence and analytic energy metrics for the benchmark
+- independent pressure-projection benchmark with a known Helmholtz split
 
 ## Public Demo Scope
 

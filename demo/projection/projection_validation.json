@@ -1,0 +1,20 @@
+{
+  "metrics": {
+    "alpha_exact": 0.125,
+    "alpha_recovered": 0.12499999999999996,
+    "divergence_after_l2": 6.678177273025184e-16,
+    "divergence_before_l2": 0.12419835639302572,
+    "divergence_reduction_factor": 185976429368974.25,
+    "energy_removed": 0.0078125,
+    "potential_l2_error": 4.3118749024639214e-17,
+    "projected_l2_error": 5.770979063254939e-17
+  },
+  "schema": "polymathica.projection.validation.v1",
+  "status": "passed",
+  "tolerances": {
+    "divergence_reduction_factor": 1000000000000.0,
+    "minimum_energy_removed": 0.001,
+    "potential_l2_tolerance": 1e-14,
+    "projected_l2_tolerance": 1e-14
+  }
+}

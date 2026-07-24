@@ -1,0 +1,11 @@
+{
+  "artifacts": {
+    "projection_config.json": "453f65e7f15aa4fc1a2aabba58053cdbdb4b7f76ead4754d9c5e4d78a6e55806",
+    "projection_report.html": "65da7e69e9d87774d4e2ec8972c46e9f43805776ef8ab33bd72736fa6722799f",
+    "projection_trace.svg": "b7300c1053583749f42c311f91ee1b69cb34f53986c9d1f7a14b1dc1292ae989",
+    "projection_validation.json": "8b4782a92d99e51899f47e1eb46847930e5cf2c0fc76b5527153579909e089dd"
+  },
+  "benchmark_id": "PERIODIC-PRESSURE-PROJECTION-KNOWN-MODE",
+  "schema": "polymathica.projection.archive.v1",
+  "status": "passed"
+}

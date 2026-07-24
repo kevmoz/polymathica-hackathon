@@ -18,5 +18,7 @@ jobs:
         run: python -m polymathica_hackathon.cli --output demo/output
       - name: Run benchmark solver
         run: python -m polymathica_hackathon.benchmark --output demo/benchmark
+      - name: Run projection benchmark
+        run: python -m polymathica_hackathon.projection --output demo/projection
       - name: Run tests
         run: python -m unittest discover -s tests

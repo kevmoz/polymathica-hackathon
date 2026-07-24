@@ -42,4 +42,12 @@ Benchmark evidence:
 
 See [BENCHMARK.md](BENCHMARK.md) for the public solver reference comparison.
 
+Projection evidence:
+
+- `demo/projection/projection_config.json`
+- `demo/projection/projection_validation.json`
+- `demo/projection/projection_manifest.json`
+
+See [PROJECTION.md](PROJECTION.md) for the public pressure-projection benchmark.
+
 ![Validation trace](assets/validation_trace.svg)

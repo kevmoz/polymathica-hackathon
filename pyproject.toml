@@ -14,6 +14,7 @@ authors = [{name = "Kevin Smith"}]
 [project.scripts]
 polymathica-demo = "polymathica_hackathon.cli:main"
 polymathica-benchmark = "polymathica_hackathon.benchmark:main"
+polymathica-projection = "polymathica_hackathon.projection:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

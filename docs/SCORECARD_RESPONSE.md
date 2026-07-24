@@ -13,5 +13,7 @@ This repository directly addresses the most important judge-readiness concerns:
 | Need benchmark-backed solver evidence | `src/polymathica_hackathon/benchmark.py` runs a Taylor-Green solver and compares against analytic velocity and energy references. |
 | Need convergence proof | `demo/benchmark/convergence_study.json` records n = 16, 32, 64 convergence with observed order 2.005. |
 | Need incompressibility evidence | `demo/benchmark/benchmark_validation.json` records max divergence L2 near machine precision. |
+| Need pressure/projection context | `src/polymathica_hackathon/projection.py` runs a known-mode pressure-projection benchmark and commits validation artifacts. |
+| Need multiple independent canonical checks | The public package now includes Taylor-Green viscous decay and a pressure-projection benchmark. |
 
 The current public package is intentionally compact: it is designed to be inspectable in minutes, while the release videos and gallery show larger simulation and rendering outputs from the broader POLYMATHICA workspace.

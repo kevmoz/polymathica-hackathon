@@ -1,0 +1,25 @@
+{
+  "benchmark_id": "PERIODIC-PRESSURE-PROJECTION-KNOWN-MODE",
+  "contaminant": {
+    "alpha": 0.125,
+    "gradient": [
+      "alpha * cos(x)",
+      "alpha * cos(y)"
+    ],
+    "potential": "alpha * (sin(x) + sin(y))"
+  },
+  "grid": {
+    "domain": [
+      0.0,
+      6.283185307179586
+    ],
+    "n": 32
+  },
+  "purpose": "verify an incompressibility projection on a known Helmholtz split",
+  "validation": {
+    "divergence_reduction_factor": 1000000000000.0,
+    "minimum_energy_removed": 0.001,
+    "potential_l2_tolerance": 1e-14,
+    "projected_l2_tolerance": 1e-14
+  }
+}
