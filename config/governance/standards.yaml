@@ -1,0 +1,65 @@
+# POLYMATHICA Governance Standards
+# Defines validation rules and evidence quality standards
+
+governance:
+  version: "1.0"
+  last_updated: "2026-07-24"
+  
+  # No placeholders, mocks, or incomplete code
+  code_quality:
+    allow_placeholders: false
+    allow_mock_data_in_production: false
+    require_working_output: true
+    require_docstrings: true
+    min_test_coverage: 0.80
+    
+  # Parameter validation rules
+  parameter_validation:
+    require_bounds: true
+    require_defaults: true
+    require_documentation: true
+    auto_validate_on_entry: true
+    
+  # Computation monitoring
+  computation:
+    require_progress_reporting: true
+    require_resource_tracking: true
+    require_event_logging: true
+    require_timing_information: true
+    
+  # Evidence and results
+  evidence:
+    require_sanity_checks: true
+    require_range_validation: true
+    require_uncertainty_estimates: true
+    require_full_metadata: true
+    auto_archive_all_results: true
+    
+  # Numerical validation
+  numerical:
+    convergence_check_interval: 10
+    mass_conservation_tolerance: 1e-10
+    energy_conservation_tolerance: 1e-8
+    stability_check: true
+    
+  # Workflow requirements
+  workflow:
+    pipeline_stages:
+      - CREATE
+      - CONFIGURE
+      - MESH
+      - VALIDATE
+      - RUN
+      - MONITOR
+      - VISUALISE
+      - RECORD
+      - REPLAY
+      - REPORT
+      - DISCUSS
+      - ARCHIVE
+      - PUBLISH
+    
+    # All stages must be completed
+    require_all_stages: true
+    # No skipping or shortcuts
+    allow_stage_skipping: false

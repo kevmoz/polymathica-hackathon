@@ -1,0 +1,44 @@
+# POLYMATHICA Core Dependencies
+
+# Scientific Computing
+numpy>=1.24.0
+scipy>=1.10.0
+jax>=0.4.0
+jaxlib>=0.4.0
+
+# Data Management
+pandas>=1.5.0
+h5py>=3.8.0
+netcdf4>=1.6.0
+
+# Visualization
+matplotlib>=3.7.0
+plotly>=5.13.0
+seaborn>=0.12.0
+
+# API & Web
+fastapi>=0.95.0
+uvicorn>=0.20.0
+pydantic>=1.10.0
+
+# Machine Learning & AI
+torch>=2.0.0
+torchvision>=0.15.0
+scikit-learn>=1.2.0
+
+# Utilities
+tqdm>=4.65.0
+pyyaml>=6.0
+python-dotenv>=1.0.0
+
+# Development & Testing
+pytest>=7.2.0
+pytest-cov>=4.0.0
+black>=23.1.0
+flake8>=6.0.0
+mypy>=1.0.0
+pylint>=2.16.0
+
+# Documentation
+sphinx>=6.1.0
+sphinx-rtd-theme>=1.2.0
