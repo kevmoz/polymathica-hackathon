@@ -1,0 +1,20 @@
+{
+  "case_id": "NS2D-LID-REPLAY-HACKATHON",
+  "equation_family": "Navier-Stokes",
+  "governance": {
+    "archive_after_report": true,
+    "no_placeholders": true,
+    "requires_validation": true
+  },
+  "grid": {
+    "domain": "unit_square",
+    "nx": 32,
+    "ny": 32
+  },
+  "mode": "deterministic_replay",
+  "parameters": {
+    "dt": 0.002,
+    "reynolds_number": 100.0,
+    "steps": 25
+  }
+}

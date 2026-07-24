@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" role="img" aria-label="POLYMATHICA architecture">
+  <rect width="1000" height="420" fill="#0d1117"/>
+  <text x="50" y="58" fill="#f0f6fc" font-family="Arial" font-size="30">POLYMATHICA Hackathon Architecture</text>
+  <g font-family="Arial" font-size="18" text-anchor="middle">
+    <rect x="50" y="120" width="150" height="70" rx="8" fill="#1f6feb"/>
+    <text x="125" y="162" fill="white">Create</text>
+    <rect x="230" y="120" width="150" height="70" rx="8" fill="#238636"/>
+    <text x="305" y="162" fill="white">Configure</text>
+    <rect x="410" y="120" width="150" height="70" rx="8" fill="#8957e5"/>
+    <text x="485" y="162" fill="white">Replay</text>
+    <rect x="590" y="120" width="150" height="70" rx="8" fill="#da3633"/>
+    <text x="665" y="162" fill="white">Validate</text>
+    <rect x="770" y="120" width="150" height="70" rx="8" fill="#9e6a03"/>
+    <text x="845" y="162" fill="white">Archive</text>
+  </g>
+  <g stroke="#8b949e" stroke-width="4">
+    <line x1="200" y1="155" x2="230" y2="155"/>
+    <line x1="380" y1="155" x2="410" y2="155"/>
+    <line x1="560" y1="155" x2="590" y2="155"/>
+    <line x1="740" y1="155" x2="770" y2="155"/>
+  </g>
+  <g font-family="Arial" font-size="18">
+    <text x="70" y="270" fill="#c9d1d9">PSIC supplies physical simulation context.</text>
+    <text x="70" y="305" fill="#c9d1d9">Graphics Core renders visual evidence and release videos.</text>
+    <text x="70" y="340" fill="#c9d1d9">Olana governs validation, provenance, and review.</text>
+  </g>
+</svg>

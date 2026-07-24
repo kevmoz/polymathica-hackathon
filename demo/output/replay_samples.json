@@ -1,0 +1,186 @@
+{
+  "samples": [
+    {
+      "divergence_l2": 2e-13,
+      "enstrophy": 0.375,
+      "kinetic_energy": 0.125,
+      "step": 0.0,
+      "time": 0.0
+    },
+    {
+      "divergence_l2": 2.01e-13,
+      "enstrophy": 0.375328165551,
+      "kinetic_energy": 0.125139433109,
+      "step": 1.0,
+      "time": 0.002
+    },
+    {
+      "divergence_l2": 2.02e-13,
+      "enstrophy": 0.375648831266,
+      "kinetic_energy": 0.125275164953,
+      "step": 2.0,
+      "time": 0.004
+    },
+    {
+      "divergence_l2": 2.03e-13,
+      "enstrophy": 0.37596211709,
+      "kinetic_energy": 0.125407255458,
+      "step": 3.0,
+      "time": 0.006
+    },
+    {
+      "divergence_l2": 2.04e-13,
+      "enstrophy": 0.376268141068,
+      "kinetic_energy": 0.125535763593,
+      "step": 4.0,
+      "time": 0.008
+    },
+    {
+      "divergence_l2": 2.05e-13,
+      "enstrophy": 0.376567019366,
+      "kinetic_energy": 0.125660747394,
+      "step": 5.0,
+      "time": 0.01
+    },
+    {
+      "divergence_l2": 2.06e-13,
+      "enstrophy": 0.37685886631,
+      "kinetic_energy": 0.125782263973,
+      "step": 6.0,
+      "time": 0.012
+    },
+    {
+      "divergence_l2": 2.07e-13,
+      "enstrophy": 0.377143794408,
+      "kinetic_energy": 0.125900369535,
+      "step": 7.0,
+      "time": 0.014
+    },
+    {
+      "divergence_l2": 2.08e-13,
+      "enstrophy": 0.377421914385,
+      "kinetic_energy": 0.126015119391,
+      "step": 8.0,
+      "time": 0.016
+    },
+    {
+      "divergence_l2": 2.09e-13,
+      "enstrophy": 0.377693335204,
+      "kinetic_energy": 0.126126567975,
+      "step": 9.0,
+      "time": 0.018
+    },
+    {
+      "divergence_l2": 2.1e-13,
+      "enstrophy": 0.377958164102,
+      "kinetic_energy": 0.126234768854,
+      "step": 10.0,
+      "time": 0.02
+    },
+    {
+      "divergence_l2": 2.11e-13,
+      "enstrophy": 0.378216506611,
+      "kinetic_energy": 0.126339774746,
+      "step": 11.0,
+      "time": 0.022
+    },
+    {
+      "divergence_l2": 2.12e-13,
+      "enstrophy": 0.378468466589,
+      "kinetic_energy": 0.12644163753,
+      "step": 12.0,
+      "time": 0.024
+    },
+    {
+      "divergence_l2": 2.13e-13,
+      "enstrophy": 0.378714146243,
+      "kinetic_energy": 0.12654040826,
+      "step": 13.0,
+      "time": 0.026
+    },
+    {
+      "divergence_l2": 2.14e-13,
+      "enstrophy": 0.378953646162,
+      "kinetic_energy": 0.126636137179,
+      "step": 14.0,
+      "time": 0.028
+    },
+    {
+      "divergence_l2": 2.15e-13,
+      "enstrophy": 0.379187065332,
+      "kinetic_energy": 0.126728873734,
+      "step": 15.0,
+      "time": 0.03
+    },
+    {
+      "divergence_l2": 2.16e-13,
+      "enstrophy": 0.379414501172,
+      "kinetic_energy": 0.126818666583,
+      "step": 16.0,
+      "time": 0.032
+    },
+    {
+      "divergence_l2": 2.17e-13,
+      "enstrophy": 0.379636049552,
+      "kinetic_energy": 0.126905563613,
+      "step": 17.0,
+      "time": 0.034
+    },
+    {
+      "divergence_l2": 2.18e-13,
+      "enstrophy": 0.379851804821,
+      "kinetic_energy": 0.126989611948,
+      "step": 18.0,
+      "time": 0.036
+    },
+    {
+      "divergence_l2": 2.19e-13,
+      "enstrophy": 0.380061859829,
+      "kinetic_energy": 0.127070857965,
+      "step": 19.0,
+      "time": 0.038
+    },
+    {
+      "divergence_l2": 2.2e-13,
+      "enstrophy": 0.380266305955,
+      "kinetic_energy": 0.127149347303,
+      "step": 20.0,
+      "time": 0.04
+    },
+    {
+      "divergence_l2": 2.21e-13,
+      "enstrophy": 0.380465233122,
+      "kinetic_energy": 0.127225124875,
+      "step": 21.0,
+      "time": 0.042
+    },
+    {
+      "divergence_l2": 2.22e-13,
+      "enstrophy": 0.38065872983,
+      "kinetic_energy": 0.127298234881,
+      "step": 22.0,
+      "time": 0.044
+    },
+    {
+      "divergence_l2": 2.23e-13,
+      "enstrophy": 0.380846883171,
+      "kinetic_energy": 0.12736872082,
+      "step": 23.0,
+      "time": 0.046
+    },
+    {
+      "divergence_l2": 2.24e-13,
+      "enstrophy": 0.381029778856,
+      "kinetic_energy": 0.127436625497,
+      "step": 24.0,
+      "time": 0.048
+    },
+    {
+      "divergence_l2": 2.25e-13,
+      "enstrophy": 0.381207501234,
+      "kinetic_energy": 0.127501991038,
+      "step": 25.0,
+      "time": 0.05
+    }
+  ]
+}

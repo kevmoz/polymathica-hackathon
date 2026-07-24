@@ -1,0 +1,35 @@
+{
+  "gates": [
+    {
+      "expected": 0.125,
+      "measured": 0.125,
+      "name": "initial_energy_reference",
+      "passed": true,
+      "tolerance": 1e-12
+    },
+    {
+      "expected": 0.0,
+      "measured": 2.25e-13,
+      "name": "divergence_bound",
+      "passed": true,
+      "tolerance": 1e-10
+    },
+    {
+      "expected": "greater_than_zero",
+      "measured": 0.125,
+      "name": "positive_energy",
+      "passed": true,
+      "tolerance": 0.0
+    },
+    {
+      "expected": "nonzero_replay_delta",
+      "measured": 0.002501991038000001,
+      "name": "lid_drive_changes_state",
+      "passed": true,
+      "tolerance": 1e-08
+    }
+  ],
+  "samples_checked": 26,
+  "schema": "polymathica.validation.v1",
+  "status": "passed"
+}

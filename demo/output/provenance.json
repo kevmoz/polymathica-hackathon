@@ -1,0 +1,21 @@
+{
+  "artifacts": {
+    "experiment_config.json": "6a4f75abd5bdd5bb936cf582c4f79c81538ae7ccc9017b6590cfbc47ba11537e",
+    "replay_samples.json": "76b0f5b986613db32b638cca149c3b7f33ef3bd2c8e9742949e0990b34bfeae2",
+    "report.html": "25f95f4675ab09b86404cdf0271ba1e9094e8b8d9bddf4648c80100392b8fbb8",
+    "validation_report.json": "862025796518e14e9007aab1d91c02fbd395a4c4938d712e82af3b5875199996",
+    "validation_trace.svg": "0bc5613314c8b53f7156fe18edb4b54e517341c37325c65193162d267ea60909"
+  },
+  "created_at": "2026-07-24T10:00:00+00:00",
+  "schema": "polymathica.provenance.v1",
+  "stages": [
+    "create",
+    "configure",
+    "run_or_replay",
+    "validate",
+    "visualise",
+    "report",
+    "archive"
+  ],
+  "workflow_id": "polymathica-hackathon-ns2d-replay"
+}

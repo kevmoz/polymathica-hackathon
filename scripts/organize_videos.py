@@ -128,6 +128,8 @@ def generate_html_gallery(output_path: str) -> None:
     <style>
         body { font-family: Arial; max-width: 1200px; margin: 0 auto; padding: 20px; background: #0d1117; color: #c9d1d9; }
         h1 { text-align: center; color: #fff; }
+        .links { text-align: center; margin: 0 0 24px; }
+        .links a { margin: 0 10px; }
         .videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
         .video-card { background: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 20px; }
         .video-title { font-size: 1.2em; font-weight: bold; margin-bottom: 10px; }
@@ -139,6 +141,13 @@ def generate_html_gallery(output_path: str) -> None:
 </head>
 <body>
     <h1>POLYMATHICA Video Gallery</h1>
+    <p class="links">
+        <a href="https://github.com/kevmoz/polymathica-hackathon">Repository</a>
+        <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/JUDGING_GUIDE.md">Judging Guide</a>
+        <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/ARCHITECTURE.md">Architecture</a>
+        <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/VALIDATION.md">Validation</a>
+        <a href="https://github.com/kevmoz/polymathica-hackathon/releases/tag/v1.0.0-hackathon">Release</a>
+    </p>
     <div class="videos">
 '''
     

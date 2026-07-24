@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-label="POLYMATHICA validation trace">
+  <rect width="900" height="420" fill="#0d1117"/>
+  <text x="70" y="42" fill="#f0f6fc" font-family="Arial" font-size="24">Validation Trace</text>
+  <rect x="70" y="70" width="760" height="250" fill="#161b22" stroke="#30363d"/>
+  <polyline points="70,294 145,292 220,289 295,286 370,282 445,278 520,274 595,269 670,264 745,259 830,253" fill="none" stroke="#2f81f7" stroke-width="5"/>
+  <text x="70" y="360" fill="#c9d1d9" font-family="Arial" font-size="18">All validation gates pass; artifacts are hashed into provenance.json.</text>
+</svg>
