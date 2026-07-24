@@ -14,13 +14,15 @@ Create
 
 ## Systems
 
-- POLYMATHICA: governed scientific workflow shell and evidence package.
-- PSIC: physical simulation and instantiation context.
-- Graphics Core: rendering and video export pathway.
-- Olana: governance, validation, provenance and review logic.
+- POLYMATHICA: experiment orchestration, execution state, evidence lifecycle and institute interface.
+- PSIC: scientific reasoning, planning, validation interpretation and research coordination.
+- Graphics Core: scientific rendering, replay and media evidence generation.
+- Olana: scientific oversight, contradiction analysis, governance review and experiment discussion.
 
 ## Demonstration Boundary
 
 The hackathon repository includes one complete deterministic replay workflow in `src/polymathica_hackathon`. It is intentionally small, readable and testable, while the release assets and docs point to the larger local GPU-generated outputs.
+
+This public package demonstrates orchestration and evidence governance. It does not publish the complete private solver, PSIC, Graphics Core or Olana development repositories.
 
 ![Architecture](assets/architecture.svg)

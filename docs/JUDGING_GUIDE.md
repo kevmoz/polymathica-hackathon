@@ -21,6 +21,13 @@ python -m unittest discover -s tests
 - provenance hashes tying artifacts together
 - public gallery and release videos
 - CI workflow for repeatable test execution
+- negative-path tests that reject invalid configs, failed validation archives and tampered artifacts
+
+## Public Demo Scope
+
+This repository demonstrates the governed evidence workflow using a deterministic Navier-Stokes replay. It does not contain the complete private POLYMATHICA solver, PSIC, Graphics Core or Olana repositories.
+
+The public demo verifies orchestration, validation gates, visualisation, report generation, provenance, artifact hash checks and archive creation.
 
 ## Submission Claim
 

@@ -17,6 +17,15 @@ from typing import Any
 
 DEFAULT_OUTPUT_DIR = Path("demo/output")
 REPLAY_CREATED_AT = "2026-07-24T10:00:00+00:00"
+REQUIRED_STAGES = ["create", "configure", "run_or_replay", "validate", "visualise", "report", "archive"]
+
+
+class WorkflowConfigurationError(ValueError):
+    """Raised when an experiment configuration violates governance rules."""
+
+
+class GovernanceError(RuntimeError):
+    """Raised when a governed workflow stage is not allowed to proceed."""
 
 
 @dataclass(frozen=True)
@@ -41,6 +50,10 @@ def write_json(path: Path, payload: dict[str, Any]) -> str:
     return sha256_bytes(encoded)
 
 
+def read_json(path: Path) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 def configured_experiment() -> dict[str, Any]:
     return {
         "case_id": "NS2D-LID-REPLAY-HACKATHON",
@@ -56,7 +69,36 @@ def configured_experiment() -> dict[str, Any]:
     }
 
 
+def validate_config(config: dict[str, Any]) -> None:
+    required = {"case_id", "equation_family", "mode", "grid", "parameters", "governance"}
+    missing = required.difference(config)
+    if missing:
+        raise WorkflowConfigurationError(f"missing required configuration keys: {sorted(missing)}")
+
+    if config["mode"] != "deterministic_replay":
+        raise WorkflowConfigurationError("public demo mode must be deterministic_replay")
+    if config["equation_family"] != "Navier-Stokes":
+        raise WorkflowConfigurationError("public demo equation_family must be Navier-Stokes")
+
+    grid = config["grid"]
+    parameters = config["parameters"]
+    governance = config["governance"]
+    if int(grid["nx"]) <= 0 or int(grid["ny"]) <= 0:
+        raise WorkflowConfigurationError("grid dimensions must be positive")
+    if float(parameters["reynolds_number"]) <= 0.0:
+        raise WorkflowConfigurationError("reynolds_number must be positive")
+    if float(parameters["dt"]) <= 0.0:
+        raise WorkflowConfigurationError("dt must be positive")
+    if int(parameters["steps"]) < 2:
+        raise WorkflowConfigurationError("steps must be at least 2")
+    if not governance.get("requires_validation"):
+        raise WorkflowConfigurationError("governance.requires_validation must be true")
+    if not governance.get("archive_after_report"):
+        raise WorkflowConfigurationError("governance.archive_after_report must be true")
+
+
 def replay_field(config: dict[str, Any]) -> list[dict[str, float]]:
+    validate_config(config)
     steps = int(config["parameters"]["steps"])
     dt = float(config["parameters"]["dt"])
     reynolds = float(config["parameters"]["reynolds_number"])
@@ -82,6 +124,8 @@ def replay_field(config: dict[str, Any]) -> list[dict[str, float]]:
 
 
 def validate(samples: list[dict[str, float]]) -> dict[str, Any]:
+    if len(samples) < 2:
+        raise WorkflowConfigurationError("validation requires at least two replay samples")
     initial = samples[0]
     final = samples[-1]
     gates = [
@@ -122,6 +166,32 @@ def validate(samples: list[dict[str, float]]) -> dict[str, Any]:
     }
 
 
+def build_archive_manifest(workflow_id: str, validation: dict[str, Any], provenance_hash: str) -> dict[str, Any]:
+    if validation["status"] != "passed":
+        raise GovernanceError("archive manifest cannot be created for failed validation")
+    return {
+        "schema": "polymathica.archive.v1",
+        "workflow_id": workflow_id,
+        "validation_status": validation["status"],
+        "provenance_sha256": provenance_hash,
+        "entrypoint": "report.html",
+        "replay_command": "python -m polymathica_hackathon.cli --output demo/output",
+    }
+
+
+def verify_artifact_hashes(provenance_path: Path, base_dir: Path | None = None) -> bool:
+    provenance = read_json(provenance_path)
+    root = base_dir or provenance_path.parent
+    for relative_path, expected_hash in provenance["artifacts"].items():
+        artifact_path = root / relative_path
+        if not artifact_path.exists():
+            raise FileNotFoundError(str(artifact_path))
+        actual_hash = sha256_bytes(artifact_path.read_bytes())
+        if actual_hash != expected_hash:
+            raise GovernanceError(f"artifact hash mismatch: {relative_path}")
+    return True
+
+
 def make_visualization(path: Path, samples: list[dict[str, float]]) -> str:
     width, height = 900, 420
     left, top, chart_w, chart_h = 70, 40, 760, 280
@@ -148,7 +218,7 @@ def make_visualization(path: Path, samples: list[dict[str, float]]) -> str:
 """
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(svg, encoding="utf-8")
-    return sha256_bytes(svg.encode("utf-8"))
+    return sha256_bytes(path.read_bytes())
 
 
 def make_report(path: Path, config: dict[str, Any], validation: dict[str, Any], visualization_path: Path) -> str:
@@ -183,15 +253,16 @@ def make_report(path: Path, config: dict[str, Any], validation: dict[str, Any], 
 """
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(body, encoding="utf-8")
-    return sha256_bytes(body.encode("utf-8"))
+    return sha256_bytes(path.read_bytes())
 
 
-def run_workflow(output_dir: Path = DEFAULT_OUTPUT_DIR) -> WorkflowResult:
+def run_workflow(output_dir: Path = DEFAULT_OUTPUT_DIR, config: dict[str, Any] | None = None) -> WorkflowResult:
     output_dir.mkdir(parents=True, exist_ok=True)
     workflow_id = "polymathica-hackathon-ns2d-replay"
     created_at = REPLAY_CREATED_AT
 
-    config = configured_experiment()
+    config = config or configured_experiment()
+    validate_config(config)
     samples = replay_field(config)
     validation = validate(samples)
 
@@ -205,7 +276,7 @@ def run_workflow(output_dir: Path = DEFAULT_OUTPUT_DIR) -> WorkflowResult:
         "schema": "polymathica.provenance.v1",
         "workflow_id": workflow_id,
         "created_at": created_at,
-        "stages": ["create", "configure", "run_or_replay", "validate", "visualise", "report", "archive"],
+        "stages": REQUIRED_STAGES,
         "artifacts": {
             "experiment_config.json": config_hash,
             "replay_samples.json": samples_hash,
@@ -216,14 +287,7 @@ def run_workflow(output_dir: Path = DEFAULT_OUTPUT_DIR) -> WorkflowResult:
     }
     provenance_hash = write_json(output_dir / "provenance.json", provenance)
 
-    archive_manifest = {
-        "schema": "polymathica.archive.v1",
-        "workflow_id": workflow_id,
-        "validation_status": validation["status"],
-        "provenance_sha256": provenance_hash,
-        "entrypoint": "report.html",
-        "replay_command": "python -m polymathica_hackathon.cli --output demo/output",
-    }
+    archive_manifest = build_archive_manifest(workflow_id, validation, provenance_hash)
     write_json(output_dir / "archive_manifest.json", archive_manifest)
 
     return WorkflowResult(

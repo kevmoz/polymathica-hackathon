@@ -144,6 +144,7 @@ def generate_html_gallery(output_path: str) -> None:
     <p class="links">
         <a href="https://github.com/kevmoz/polymathica-hackathon">Repository</a>
         <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/JUDGING_GUIDE.md">Judging Guide</a>
+        <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/SCORECARD_RESPONSE.md">Scorecard</a>
         <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/ARCHITECTURE.md">Architecture</a>
         <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/VALIDATION.md">Validation</a>
         <a href="https://github.com/kevmoz/polymathica-hackathon/releases/tag/v1.0.0-hackathon">Release</a>

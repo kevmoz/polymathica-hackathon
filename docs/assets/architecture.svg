@@ -20,8 +20,8 @@
     <line x1="740" y1="155" x2="770" y2="155"/>
   </g>
   <g font-family="Arial" font-size="18">
-    <text x="70" y="270" fill="#c9d1d9">PSIC supplies physical simulation context.</text>
-    <text x="70" y="305" fill="#c9d1d9">Graphics Core renders visual evidence and release videos.</text>
-    <text x="70" y="340" fill="#c9d1d9">Olana governs validation, provenance, and review.</text>
+    <text x="70" y="270" fill="#c9d1d9">PSIC coordinates scientific reasoning and validation interpretation.</text>
+    <text x="70" y="305" fill="#c9d1d9">Graphics Core generates replay, rendering, and media evidence.</text>
+    <text x="70" y="340" fill="#c9d1d9">Olana handles oversight, contradiction analysis, and governance review.</text>
   </g>
 </svg>

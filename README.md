@@ -9,6 +9,7 @@ A governed scientific workflow that converts a configured Navier-Stokes experime
 - GitHub Pages gallery: https://kevmoz.github.io/polymathica-hackathon
 - Release videos: https://github.com/kevmoz/polymathica-hackathon/releases/tag/v1.0.0-hackathon
 - Judging guide: [docs/JUDGING_GUIDE.md](docs/JUDGING_GUIDE.md)
+- Scorecard response: [docs/SCORECARD_RESPONSE.md](docs/SCORECARD_RESPONSE.md)
 - Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 - Validation notes: [docs/VALIDATION.md](docs/VALIDATION.md)
 
@@ -19,6 +20,14 @@ Create -> Configure -> Run or Replay -> Validate -> Visualise -> Report -> Archi
 ```
 
 This repository is the compact public submission package for judges. It contains a runnable deterministic replay workflow, tests, CI configuration, generated evidence, documentation, and links to seven real simulation videos published as GitHub Release assets.
+
+## Public Demo Scope
+
+This repository demonstrates the governed evidence workflow using a deterministic Navier-Stokes replay.
+
+It does not contain the complete private POLYMATHICA solver, PSIC, Graphics Core or Olana development repositories.
+
+The public demo verifies orchestration, configuration governance, validation gates, scientific visualisation, report generation, provenance hashing, artifact integrity checks and archive creation. The release videos show larger GPU/rendering outputs prepared from the broader POLYMATHICA workspace.
 
 ## Run In Three Commands
 
@@ -52,10 +61,10 @@ PYTHONPATH=src python -m polymathica_hackathon.cli --output demo/output
 
 ## Core Systems
 
-- POLYMATHICA: governed scientific workflow shell and evidence package.
-- PSIC: physical simulation and instantiation context.
-- Graphics Core: rendering and video export pathway.
-- Olana: governance, validation, provenance and review logic.
+- POLYMATHICA: experiment orchestration, execution state, evidence lifecycle and institute interface.
+- PSIC: scientific reasoning, planning, validation interpretation and research coordination.
+- Graphics Core: scientific rendering, replay and media evidence generation.
+- Olana: scientific oversight, contradiction analysis, governance review and experiment discussion.
 
 ## What Is Original Here
 

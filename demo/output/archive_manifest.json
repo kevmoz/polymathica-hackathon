@@ -1,6 +1,6 @@
 {
   "entrypoint": "report.html",
-  "provenance_sha256": "95d2aa4d682d8c5020f87b4a63258f0d3cfa32e9708b8d439e9484d56da0c307",
+  "provenance_sha256": "a3d3f35f1e32238eeec617e42da13c7f2677840e06c0e8bef25bb47def777210",
   "replay_command": "python -m polymathica_hackathon.cli --output demo/output",
   "schema": "polymathica.archive.v1",
   "validation_status": "passed",

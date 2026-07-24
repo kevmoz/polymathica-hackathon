@@ -7,6 +7,15 @@ The demonstration workflow generates four validation gates:
 - kinetic energy remains positive
 - the replay changes state under lid-driven forcing
 
+The test suite also checks negative governance paths:
+
+- invalid configurations are rejected
+- public demo mode cannot be mislabeled as a live solver
+- failed validation cannot produce an archive manifest
+- artifact hash mismatches are detected
+- missing artifacts are detected
+- provenance schema contains the required lifecycle stages
+
 Run locally:
 
 ```bash
