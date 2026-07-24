@@ -1,0 +1,40 @@
+{
+  "components": {
+    "poiseuille": {
+      "flow_rate_error": 8.1380208333523e-05,
+      "l2_error": 2.25936822985947e-16,
+      "observed_order": 1.9999999999322,
+      "status": "passed",
+      "validation": "poiseuille/poiseuille_validation.json",
+      "wall_shear_error": 1.2212453270876722e-15
+    },
+    "projection": {
+      "divergence_after_l2": 6.678177273025184e-16,
+      "divergence_before_l2": 0.12419835639302572,
+      "projected_l2_error": 5.770979063254939e-17,
+      "status": "passed",
+      "validation": "projection/projection_validation.json"
+    },
+    "taylor_green": {
+      "energy_relative_error": 1.2794881302461127e-05,
+      "l2_error": 4.5146209629361505e-06,
+      "max_divergence_l2": 1.052400427072186e-15,
+      "observed_order": 2.0050088027938417,
+      "status": "passed",
+      "validation": "benchmark/benchmark_validation.json"
+    },
+    "workflow": {
+      "archive_manifest": "output/archive_manifest.json",
+      "provenance": "output/provenance.json",
+      "report": "output/report.html",
+      "status": "passed"
+    }
+  },
+  "reviewer_commands": [
+    "python -m polymathica_hackathon.suite --output demo",
+    "python -m unittest discover -s tests"
+  ],
+  "schema": "polymathica.evidence_suite.summary.v1",
+  "scope": "public demonstration package for the broader POLYMATHICA ecosystem",
+  "status": "passed"
+}

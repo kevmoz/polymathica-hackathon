@@ -19,6 +19,13 @@ The test suite also checks negative governance paths:
 Run locally:
 
 ```bash
+python -m polymathica_hackathon.suite --output demo
+python -m unittest discover -s tests
+```
+
+Expanded component path:
+
+```bash
 python -m polymathica_hackathon.cli --output demo/output
 python -m polymathica_hackathon.benchmark --output demo/benchmark
 python -m polymathica_hackathon.projection --output demo/projection
@@ -28,6 +35,8 @@ python -m unittest discover -s tests
 
 Generated evidence:
 
+- `demo/evidence_suite_summary.json`
+- `demo/evidence_suite_manifest.json`
 - `demo/output/experiment_config.json`
 - `demo/output/replay_samples.json`
 - `demo/output/validation_report.json`

@@ -1,0 +1,14 @@
+{
+  "artifacts": {
+    "benchmark/benchmark_validation.json": "fc993f7259fa8191ee9ec874315d42466a1c0125723bec11f307269cbdfabe10",
+    "benchmark/convergence_study.json": "068aa262f39cbfa9e940119d98d2b75d1b3de4b7512de6f03d436b6ef0adf021",
+    "evidence_suite_summary.json": "b14a0372c5d7ba16fb2711885bfffbc42c2553695f4d36bba9264b55a0ae469a",
+    "output/archive_manifest.json": "abb916ba7cd3960af3f67064138811e3f36df05ec0e04e1476b922d2a7deacb1",
+    "output/provenance.json": "a3d3f35f1e32238eeec617e42da13c7f2677840e06c0e8bef25bb47def777210",
+    "poiseuille/poiseuille_convergence.json": "096280fa15c642e0ebdf4cdb7cac6e3173623ea72a7783d00b20b6ae6403718e",
+    "poiseuille/poiseuille_validation.json": "5098cb45499dd1d85c1b2087eef6443b83dcc89a837ab1ee0a3791498bb22ca0",
+    "projection/projection_validation.json": "8b4782a92d99e51899f47e1eb46847930e5cf2c0fc76b5527153579909e089dd"
+  },
+  "schema": "polymathica.evidence_suite.manifest.v1",
+  "status": "passed"
+}

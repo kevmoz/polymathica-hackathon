@@ -16,6 +16,7 @@ polymathica-demo = "polymathica_hackathon.cli:main"
 polymathica-benchmark = "polymathica_hackathon.benchmark:main"
 polymathica-projection = "polymathica_hackathon.projection:main"
 polymathica-poiseuille = "polymathica_hackathon.poiseuille:main"
+polymathica-suite = "polymathica_hackathon.suite:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

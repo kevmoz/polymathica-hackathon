@@ -7,6 +7,7 @@ This repository directly addresses the most important judge-readiness concerns:
 | Empty flagship repository | README, source package, tests, docs, demo output and CI are present. |
 | Claims without verification | Validation report, provenance hashes, archive manifest and report are committed. |
 | Unclear run path | README and judging guide include direct run commands. |
+| Need one-command review path | `python -m polymathica_hackathon.suite --output demo` runs the public workflow and all benchmark families, then writes aggregate evidence artifacts. |
 | Replay vs live solver ambiguity | Public demo scope states this is a deterministic replay evidence workflow. |
 | Weak governance evidence | Tests cover invalid config rejection, archive blocking, missing artifacts and hash tampering. |
 | System ownership ambiguity | README and architecture docs define POLYMATHICA, PSIC, Graphics Core and Olana roles. |
@@ -17,5 +18,6 @@ This repository directly addresses the most important judge-readiness concerns:
 | Need wall-bounded benchmark evidence | `src/polymathica_hackathon/poiseuille.py` runs a pressure-driven plane Poiseuille benchmark against analytic centerline, bulk-flow and wall-shear references. |
 | Need multiple independent canonical checks | The public package now includes Taylor-Green viscous decay, known-mode pressure projection and plane Poiseuille channel flow. |
 | Need convergence beyond one case | Taylor-Green records grid convergence for final velocity error; Poiseuille records second-order bulk flow-rate convergence. |
+| Need API/reference documentation | `docs/API_REFERENCE.md` documents public commands, result objects and callable functions. |
 
 The current public package is intentionally compact: it is designed to be inspectable in minutes, while the release videos and gallery show larger simulation and rendering outputs from the broader POLYMATHICA workspace.

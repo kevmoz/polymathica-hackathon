@@ -22,5 +22,7 @@ jobs:
         run: python -m polymathica_hackathon.projection --output demo/projection
       - name: Run Poiseuille benchmark
         run: python -m polymathica_hackathon.poiseuille --output demo/poiseuille
+      - name: Run complete evidence suite
+        run: python -m polymathica_hackathon.suite --output demo
       - name: Run tests
         run: python -m unittest discover -s tests

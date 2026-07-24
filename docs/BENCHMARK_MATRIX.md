@@ -11,6 +11,12 @@ This page gives judges a one-screen map of the public numerical evidence.
 ## Reproduce All Numerical Evidence
 
 ```bash
+python -m polymathica_hackathon.suite --output demo
+```
+
+Expanded component path:
+
+```bash
 python -m polymathica_hackathon.benchmark --output demo/benchmark
 python -m polymathica_hackathon.projection --output demo/projection
 python -m polymathica_hackathon.poiseuille --output demo/poiseuille

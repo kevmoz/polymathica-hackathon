@@ -12,6 +12,7 @@ A governed scientific workflow that converts a configured Navier-Stokes experime
 - Reviewer note: [docs/REVIEWER_NOTE.md](docs/REVIEWER_NOTE.md)
 - Scorecard response: [docs/SCORECARD_RESPONSE.md](docs/SCORECARD_RESPONSE.md)
 - Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+- API reference: [docs/API_REFERENCE.md](docs/API_REFERENCE.md)
 - Validation notes: [docs/VALIDATION.md](docs/VALIDATION.md)
 - Public benchmark solver: [docs/BENCHMARK.md](docs/BENCHMARK.md)
 - Benchmark matrix: [docs/BENCHMARK_MATRIX.md](docs/BENCHMARK_MATRIX.md)
@@ -42,6 +43,13 @@ The public demo verifies orchestration, configuration governance, validation gat
 git clone https://github.com/kevmoz/polymathica-hackathon.git
 cd polymathica-hackathon
 python -m pip install -e .
+python -m polymathica_hackathon.suite --output demo
+python -m unittest discover -s tests
+```
+
+Expanded component path:
+
+```bash
 python -m polymathica_hackathon.cli --output demo/output
 python -m polymathica_hackathon.benchmark --output demo/benchmark
 python -m polymathica_hackathon.projection --output demo/projection
@@ -77,6 +85,8 @@ PYTHONPATH=src python -m polymathica_hackathon.cli --output demo/output
 - Poiseuille validation: [demo/poiseuille/poiseuille_validation.json](demo/poiseuille/poiseuille_validation.json)
 - Poiseuille convergence: [demo/poiseuille/poiseuille_convergence.json](demo/poiseuille/poiseuille_convergence.json)
 - Poiseuille report: [demo/poiseuille/poiseuille_report.html](demo/poiseuille/poiseuille_report.html)
+- Complete evidence suite summary: [demo/evidence_suite_summary.json](demo/evidence_suite_summary.json)
+- Complete evidence suite manifest: [demo/evidence_suite_manifest.json](demo/evidence_suite_manifest.json)
 
 Benchmark summary:
 

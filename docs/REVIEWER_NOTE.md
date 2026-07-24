@@ -15,6 +15,7 @@ configured experiment -> governed execution -> validation gates -> visual eviden
 - negative-path governance tests
 - artifact hashing and provenance records
 - CI execution on GitHub Actions
+- public API and command reference
 - three compact numerical benchmark families
 - analytic reference comparisons
 - convergence evidence for Taylor-Green and Poiseuille cases
@@ -32,6 +33,13 @@ Hackathon judges need a fast path from claim to evidence. This repository keeps 
 
 ```bash
 python -m pip install -e .
+python -m polymathica_hackathon.suite --output demo
+python -m unittest discover -s tests
+```
+
+The expanded component commands are:
+
+```bash
 python -m polymathica_hackathon.cli --output demo/output
 python -m polymathica_hackathon.benchmark --output demo/benchmark
 python -m polymathica_hackathon.projection --output demo/projection
