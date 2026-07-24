@@ -1,0 +1,35 @@
+{
+  "mean_observed_order": 2.0050088027938417,
+  "observed_orders": [
+    1.9978273482647937,
+    2.01219025732289
+  ],
+  "quantity": "final velocity L2 error vs analytic Taylor-Green reference",
+  "rows": [
+    {
+      "dx": 0.39269908169872414,
+      "energy_relative_error": 5.1102999719404034e-05,
+      "l2_error": 1.8031308830810345e-05,
+      "max_divergence_l2": 3.8610115007195323e-16,
+      "max_error": 2.55001214961581e-05,
+      "n": 16
+    },
+    {
+      "dx": 0.19634954084936207,
+      "energy_relative_error": 1.2794881302461127e-05,
+      "l2_error": 4.5146209629361505e-06,
+      "max_divergence_l2": 1.052400427072186e-15,
+      "max_error": 6.384638195133796e-06,
+      "n": 32
+    },
+    {
+      "dx": 0.09817477042468103,
+      "energy_relative_error": 3.1717978508386057e-06,
+      "l2_error": 1.1191586852024544e-06,
+      "max_divergence_l2": 1.9103297702688916e-15,
+      "max_error": 1.5827293913250884e-06,
+      "n": 64
+    }
+  ],
+  "schema": "polymathica.benchmark.convergence.v1"
+}

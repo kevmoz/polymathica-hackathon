@@ -62,7 +62,17 @@ PYTHONPATH=src python -m polymathica_hackathon.cli --output demo/output
 - Scientific visualisation: [demo/output/validation_trace.svg](demo/output/validation_trace.svg)
 - Benchmark solver: [src/polymathica_hackathon/benchmark.py](src/polymathica_hackathon/benchmark.py)
 - Benchmark validation: [demo/benchmark/benchmark_validation.json](demo/benchmark/benchmark_validation.json)
+- Benchmark convergence study: [demo/benchmark/convergence_study.json](demo/benchmark/convergence_study.json)
 - Benchmark report: [demo/benchmark/benchmark_report.html](demo/benchmark/benchmark_report.html)
+
+Benchmark summary:
+
+- Taylor-Green viscous-decay velocity benchmark
+- analytic velocity-field and kinetic-energy references
+- grid convergence at `n = 16, 32, 64`
+- observed convergence order: `2.005`
+- final velocity L2 error: `4.514621e-06`
+- max divergence L2: `1.052400e-15`
 
 ## Core Systems
 

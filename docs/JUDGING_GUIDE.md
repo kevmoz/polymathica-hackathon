@@ -24,6 +24,8 @@ python -m unittest discover -s tests
 - CI workflow for repeatable test execution
 - negative-path tests that reject invalid configs, failed validation archives and tampered artifacts
 - small public Taylor-Green benchmark solver with analytic reference comparison
+- grid-convergence evidence showing observed second-order behavior
+- divergence and analytic energy metrics for the benchmark
 
 ## Public Demo Scope
 

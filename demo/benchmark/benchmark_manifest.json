@@ -1,10 +1,11 @@
 {
   "artifacts": {
-    "benchmark_config.json": "46f36629be76313caca9a07c51b6c6a9a42c99728f4810d9d9a87c4859d63e85",
-    "benchmark_report.html": "8911ac3de058aafd03e695b68b973a782339d9d6ac29d1d57f02e16abc386232",
+    "benchmark_config.json": "f4636110d73856a8f74ed07b8484e8811a867e835ebd343d3fe50e2a7c2f1889",
+    "benchmark_report.html": "9c897cc0246f2cafa6f2c3356f544b386b2bc2f233e8771d67268b06dad5987a",
     "benchmark_trace.svg": "a58843d156261f79f86fd14e54eca8b826627f26a3495883769f36977a4ebba7",
-    "benchmark_validation.json": "c4f346443c949a0bfd8f7d6d649629925261c78390873651904cb4131b7c9e40",
-    "energy_history.json": "75adaa180db2d0dec32235fad1b949fb3661f9fc4d127fc583be9e95f7bfc310"
+    "benchmark_validation.json": "fc993f7259fa8191ee9ec874315d42466a1c0125723bec11f307269cbdfabe10",
+    "convergence_study.json": "068aa262f39cbfa9e940119d98d2b75d1b3de4b7512de6f03d436b6ef0adf021",
+    "energy_history.json": "9dc26be04952d7c52d0349f6f4b24680abc130ba6f54ce362ef8cdcf933df378"
   },
   "benchmark_id": "TAYLOR-GREEN-VORTEX-VISCOUS-DECAY",
   "schema": "polymathica.benchmark.archive.v1",

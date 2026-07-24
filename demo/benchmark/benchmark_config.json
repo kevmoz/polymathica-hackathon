@@ -1,5 +1,14 @@
 {
   "benchmark_id": "TAYLOR-GREEN-VORTEX-VISCOUS-DECAY",
+  "convergence": {
+    "dt": 0.001,
+    "grid_sizes": [
+      16,
+      32,
+      64
+    ],
+    "steps": 100
+  },
   "equation_family": "incompressible Navier-Stokes",
   "grid": {
     "domain": [
@@ -19,7 +28,10 @@
     "v": "-cos(x) * sin(y) * exp(-2*nu*t)"
   },
   "validation": {
+    "divergence_l2_tolerance": 1e-12,
+    "energy_relative_tolerance": 0.0002,
     "l2_tolerance": 0.0002,
-    "max_tolerance": 0.0004
+    "max_tolerance": 0.0004,
+    "minimum_observed_order": 1.9
   }
 }

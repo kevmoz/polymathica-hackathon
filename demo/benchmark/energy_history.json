@@ -1,506 +1,809 @@
 {
   "history": [
     {
+      "analytic_kinetic_energy": 0.25,
+      "divergence_l2": 6.560635377996073e-16,
+      "energy_relative_error": 0.0,
       "kinetic_energy": 0.25,
       "step": 0,
       "time": 0.0
     },
     {
+      "analytic_kinetic_energy": 0.2499900002,
+      "divergence_l2": 6.52201524363939e-16,
+      "energy_relative_error": 1.2794800388123504e-07,
       "kinetic_energy": 0.249990032186,
       "step": 1,
       "time": 0.001
     },
     {
+      "analytic_kinetic_energy": 0.2499800008,
+      "divergence_l2": 6.702828031327553e-16,
+      "energy_relative_error": 2.5589602416417583e-07,
       "kinetic_energy": 0.249980064769,
       "step": 2,
       "time": 0.002
     },
     {
+      "analytic_kinetic_energy": 0.2499700018,
+      "divergence_l2": 6.621334346694041e-16,
+      "energy_relative_error": 3.838440607917937e-07,
       "kinetic_energy": 0.249970097749,
       "step": 3,
       "time": 0.003
     },
     {
+      "analytic_kinetic_energy": 0.2499600032,
+      "divergence_l2": 6.932162893033946e-16,
+      "energy_relative_error": 5.117921138181236e-07,
       "kinetic_energy": 0.249960131127,
       "step": 4,
       "time": 0.004
     },
     {
+      "analytic_kinetic_energy": 0.249950005,
+      "divergence_l2": 6.801742692736688e-16,
+      "energy_relative_error": 6.397401831861972e-07,
       "kinetic_energy": 0.249950164903,
       "step": 5,
       "time": 0.005
     },
     {
+      "analytic_kinetic_energy": 0.249940007199,
+      "divergence_l2": 6.713024756310107e-16,
+      "energy_relative_error": 7.676882689501186e-07,
       "kinetic_energy": 0.249940199075,
       "step": 6,
       "time": 0.006
     },
     {
+      "analytic_kinetic_energy": 0.249930009799,
+      "divergence_l2": 6.878241626880639e-16,
+      "energy_relative_error": 8.956363710529797e-07,
       "kinetic_energy": 0.249930233645,
       "step": 7,
       "time": 0.007
     },
     {
+      "analytic_kinetic_energy": 0.249920012799,
+      "divergence_l2": 6.803589309806187e-16,
+      "energy_relative_error": 1.023584489548954e-06,
       "kinetic_energy": 0.249920268613,
       "step": 8,
       "time": 0.008
     },
     {
+      "analytic_kinetic_energy": 0.249910016198,
+      "divergence_l2": 6.898492510779326e-16,
+      "energy_relative_error": 1.1515326243811935e-06,
       "kinetic_energy": 0.249910303978,
       "step": 9,
       "time": 0.009
     },
     {
+      "analytic_kinetic_energy": 0.249900019997,
+      "divergence_l2": 6.809683083511281e-16,
+      "energy_relative_error": 1.2794807756039409e-06,
       "kinetic_energy": 0.24990033974,
       "step": 10,
       "time": 0.01
     },
     {
+      "analytic_kinetic_energy": 0.249890024196,
+      "divergence_l2": 7.050365944271377e-16,
+      "energy_relative_error": 1.4074289431604087e-06,
       "kinetic_energy": 0.249890375899,
       "step": 11,
       "time": 0.011
     },
     {
+      "analytic_kinetic_energy": 0.249880028795,
+      "divergence_l2": 7.025578052416663e-16,
+      "energy_relative_error": 1.5353771271049087e-06,
       "kinetic_energy": 0.249880412455,
       "step": 12,
       "time": 0.012
     },
     {
+      "analytic_kinetic_energy": 0.249870033794,
+      "divergence_l2": 7.024868734432191e-16,
+      "energy_relative_error": 1.663325327491794e-06,
       "kinetic_energy": 0.249870449409,
       "step": 13,
       "time": 0.013
     },
     {
+      "analytic_kinetic_energy": 0.249860039193,
+      "divergence_l2": 7.144201408665358e-16,
+      "energy_relative_error": 1.7912735442643743e-06,
       "kinetic_energy": 0.24986048676,
       "step": 14,
       "time": 0.014
     },
     {
+      "analytic_kinetic_energy": 0.249850044991,
+      "divergence_l2": 7.112391961090375e-16,
+      "energy_relative_error": 1.9192217772548937e-06,
       "kinetic_energy": 0.249850524509,
       "step": 15,
       "time": 0.015
     },
     {
+      "analytic_kinetic_energy": 0.249840051189,
+      "divergence_l2": 6.836935295815707e-16,
+      "energy_relative_error": 2.0471700267399764e-06,
       "kinetic_energy": 0.249840562654,
       "step": 16,
       "time": 0.016
     },
     {
+      "analytic_kinetic_energy": 0.249830057787,
+      "divergence_l2": 7.096559864838457e-16,
+      "energy_relative_error": 2.1751182925519318e-06,
       "kinetic_energy": 0.249830601197,
       "step": 17,
       "time": 0.017
     },
     {
+      "analytic_kinetic_energy": 0.249820064784,
+      "divergence_l2": 7.082222050808591e-16,
+      "energy_relative_error": 2.3030665748563813e-06,
       "kinetic_energy": 0.249820640137,
       "step": 18,
       "time": 0.018
     },
     {
+      "analytic_kinetic_energy": 0.249810072182,
+      "divergence_l2": 7.367599617523015e-16,
+      "energy_relative_error": 2.4310148734856855e-06,
       "kinetic_energy": 0.249810679474,
       "step": 19,
       "time": 0.019
     },
     {
+      "analytic_kinetic_energy": 0.249800079979,
+      "divergence_l2": 7.904266572222234e-16,
+      "energy_relative_error": 2.558963188272211e-06,
       "kinetic_energy": 0.249800719208,
       "step": 20,
       "time": 0.02
     },
     {
+      "analytic_kinetic_energy": 0.249790088175,
+      "divergence_l2": 7.654668903104793e-16,
+      "energy_relative_error": 2.6869115196039087e-06,
       "kinetic_energy": 0.249790759339,
       "step": 21,
       "time": 0.021
     },
     {
+      "analytic_kinetic_energy": 0.249780096772,
+      "divergence_l2": 7.926725003205463e-16,
+      "energy_relative_error": 2.814859867202102e-06,
       "kinetic_energy": 0.249780799868,
       "step": 22,
       "time": 0.022
     },
     {
+      "analytic_kinetic_energy": 0.249770105768,
+      "divergence_l2": 7.922889287660473e-16,
+      "energy_relative_error": 2.942808231454853e-06,
       "kinetic_energy": 0.249770840793,
       "step": 23,
       "time": 0.023
     },
     {
+      "analytic_kinetic_energy": 0.249760115163,
+      "divergence_l2": 7.882834742322823e-16,
+      "energy_relative_error": 3.070756611861282e-06,
       "kinetic_energy": 0.249760882116,
       "step": 24,
       "time": 0.024
     },
     {
+      "analytic_kinetic_energy": 0.249750124958,
+      "divergence_l2": 8.128208642122623e-16,
+      "energy_relative_error": 3.1987050085872652e-06,
       "kinetic_energy": 0.249750923835,
       "step": 25,
       "time": 0.025
     },
     {
+      "analytic_kinetic_energy": 0.249740135153,
+      "divergence_l2": 8.034953864024275e-16,
+      "energy_relative_error": 3.3266534216876004e-06,
       "kinetic_energy": 0.249740965952,
       "step": 26,
       "time": 0.026
     },
     {
+      "analytic_kinetic_energy": 0.249730145748,
+      "divergence_l2": 7.807244242414693e-16,
+      "energy_relative_error": 3.4546018513282676e-06,
       "kinetic_energy": 0.249731008466,
       "step": 27,
       "time": 0.027
     },
     {
+      "analytic_kinetic_energy": 0.249720156741,
+      "divergence_l2": 7.8276006580698825e-16,
+      "energy_relative_error": 3.5825502972307197e-06,
       "kinetic_energy": 0.249721051376,
       "step": 28,
       "time": 0.028
     },
     {
+      "analytic_kinetic_energy": 0.249710168135,
+      "divergence_l2": 8.212604551706998e-16,
+      "energy_relative_error": 3.710498759449851e-06,
       "kinetic_energy": 0.249711094684,
       "step": 29,
       "time": 0.029
     },
     {
+      "analytic_kinetic_energy": 0.249700179928,
+      "divergence_l2": 8.412308941178827e-16,
+      "energy_relative_error": 3.838447238151753e-06,
       "kinetic_energy": 0.249701138389,
       "step": 30,
       "time": 0.03
     },
     {
+      "analytic_kinetic_energy": 0.249690192121,
+      "divergence_l2": 8.722096557081887e-16,
+      "energy_relative_error": 3.966395733057935e-06,
       "kinetic_energy": 0.249691182491,
       "step": 31,
       "time": 0.031
     },
     {
+      "analytic_kinetic_energy": 0.249680204713,
+      "divergence_l2": 9.133960757649163e-16,
+      "energy_relative_error": 4.094344244445719e-06,
       "kinetic_energy": 0.249681226989,
       "step": 32,
       "time": 0.032
     },
     {
+      "analytic_kinetic_energy": 0.249670217704,
+      "divergence_l2": 9.215363673888247e-16,
+      "energy_relative_error": 4.222292772258995e-06,
       "kinetic_energy": 0.249671271885,
       "step": 33,
       "time": 0.033
     },
     {
+      "analytic_kinetic_energy": 0.249660231095,
+      "divergence_l2": 9.612905440109067e-16,
+      "energy_relative_error": 4.350241316441678e-06,
       "kinetic_energy": 0.249661317177,
       "step": 34,
       "time": 0.034
     },
     {
+      "analytic_kinetic_energy": 0.249650244886,
+      "divergence_l2": 9.52449241637345e-16,
+      "energy_relative_error": 4.478189876937707e-06,
       "kinetic_energy": 0.249651362867,
       "step": 35,
       "time": 0.035
     },
     {
+      "analytic_kinetic_energy": 0.249640259076,
+      "divergence_l2": 9.554080716750387e-16,
+      "energy_relative_error": 4.606138453802224e-06,
       "kinetic_energy": 0.249641408953,
       "step": 36,
       "time": 0.036
     },
     {
+      "analytic_kinetic_energy": 0.249630273665,
+      "divergence_l2": 9.484393113718254e-16,
+      "energy_relative_error": 4.734087047090416e-06,
       "kinetic_energy": 0.249631455436,
       "step": 37,
       "time": 0.037
     },
     {
+      "analytic_kinetic_energy": 0.249620288654,
+      "divergence_l2": 9.684378164952663e-16,
+      "energy_relative_error": 4.862035656746318e-06,
       "kinetic_energy": 0.249621502316,
       "step": 38,
       "time": 0.038
     },
     {
+      "analytic_kinetic_energy": 0.249610304042,
+      "divergence_l2": 9.863542896718386e-16,
+      "energy_relative_error": 4.98998428271399e-06,
       "kinetic_energy": 0.249611549593,
       "step": 39,
       "time": 0.039
     },
     {
+      "analytic_kinetic_energy": 0.249600319829,
+      "divergence_l2": 1.0122891430491335e-15,
+      "energy_relative_error": 5.117932925048714e-06,
       "kinetic_energy": 0.249601597267,
       "step": 40,
       "time": 0.04
     },
     {
+      "analytic_kinetic_energy": 0.249590336016,
+      "divergence_l2": 1.0206809066854379e-15,
+      "energy_relative_error": 5.245881583805816e-06,
       "kinetic_energy": 0.249591645338,
       "step": 41,
       "time": 0.041
     },
     {
+      "analytic_kinetic_energy": 0.249580352603,
+      "divergence_l2": 1.0123220941093883e-15,
+      "energy_relative_error": 5.373830258818242e-06,
       "kinetic_energy": 0.249581693805,
       "step": 42,
       "time": 0.042
     },
     {
+      "analytic_kinetic_energy": 0.249570369588,
+      "divergence_l2": 1.0186935465748038e-15,
+      "energy_relative_error": 5.501778950363802e-06,
       "kinetic_energy": 0.249571742669,
       "step": 43,
       "time": 0.043
     },
     {
+      "analytic_kinetic_energy": 0.249560386973,
+      "divergence_l2": 9.70593428668066e-16,
+      "energy_relative_error": 5.629727658164289e-06,
       "kinetic_energy": 0.24956179193,
       "step": 44,
       "time": 0.044
     },
     {
+      "analytic_kinetic_energy": 0.249550404757,
+      "divergence_l2": 9.943208670507285e-16,
+      "energy_relative_error": 5.757676382386375e-06,
       "kinetic_energy": 0.249551841588,
       "step": 45,
       "time": 0.045
     },
     {
+      "analytic_kinetic_energy": 0.249540422941,
+      "divergence_l2": 1.0113524036564856e-15,
+      "energy_relative_error": 5.885625122863114e-06,
       "kinetic_energy": 0.249541891642,
       "step": 46,
       "time": 0.046
     },
     {
+      "analytic_kinetic_energy": 0.249530441523,
+      "divergence_l2": 1.0175795328691644e-15,
+      "energy_relative_error": 6.013573879872487e-06,
       "kinetic_energy": 0.249531942093,
       "step": 47,
       "time": 0.047
     },
     {
+      "analytic_kinetic_energy": 0.249520460505,
+      "divergence_l2": 1.0068779938993884e-15,
+      "energy_relative_error": 6.141522653247612e-06,
       "kinetic_energy": 0.249521992941,
       "step": 48,
       "time": 0.048
     },
     {
+      "analytic_kinetic_energy": 0.249510479886,
+      "divergence_l2": 1.017745423779982e-15,
+      "energy_relative_error": 6.269471442932849e-06,
       "kinetic_energy": 0.249512044185,
       "step": 49,
       "time": 0.049
     },
     {
+      "analytic_kinetic_energy": 0.249500499667,
+      "divergence_l2": 9.97170118256523e-16,
+      "energy_relative_error": 6.397420248983829e-06,
       "kinetic_energy": 0.249502095826,
       "step": 50,
       "time": 0.05
     },
     {
+      "analytic_kinetic_energy": 0.249490519846,
+      "divergence_l2": 1.0047463118094163e-15,
+      "energy_relative_error": 6.525369071456227e-06,
       "kinetic_energy": 0.249492147864,
       "step": 51,
       "time": 0.051
     },
     {
+      "analytic_kinetic_energy": 0.249480540425,
+      "divergence_l2": 9.693772801368414e-16,
+      "energy_relative_error": 6.653317910294502e-06,
       "kinetic_energy": 0.249482200299,
       "step": 52,
       "time": 0.052
     },
     {
+      "analytic_kinetic_energy": 0.249470561403,
+      "divergence_l2": 9.356085986515183e-16,
+      "energy_relative_error": 6.781266765443137e-06,
       "kinetic_energy": 0.24947225313,
       "step": 53,
       "time": 0.053
     },
     {
+      "analytic_kinetic_energy": 0.24946058278,
+      "divergence_l2": 9.37950714704028e-16,
+      "energy_relative_error": 6.909215636957904e-06,
       "kinetic_energy": 0.249462306357,
       "step": 54,
       "time": 0.054
     },
     {
+      "analytic_kinetic_energy": 0.249450604557,
+      "divergence_l2": 9.588025553415808e-16,
+      "energy_relative_error": 7.037164524783347e-06,
       "kinetic_energy": 0.249452359982,
       "step": 55,
       "time": 0.055
     },
     {
+      "analytic_kinetic_energy": 0.249440626732,
+      "divergence_l2": 9.39376261445136e-16,
+      "energy_relative_error": 7.165113429197848e-06,
       "kinetic_energy": 0.249442414002,
       "step": 56,
       "time": 0.056
     },
     {
+      "analytic_kinetic_energy": 0.249430649306,
+      "divergence_l2": 9.429676067933365e-16,
+      "energy_relative_error": 7.2930623498122125e-06,
       "kinetic_energy": 0.24943246842,
       "step": 57,
       "time": 0.057
     },
     {
+      "analytic_kinetic_energy": 0.24942067228,
+      "divergence_l2": 9.590488833252574e-16,
+      "energy_relative_error": 7.421011286793617e-06,
       "kinetic_energy": 0.249422523234,
       "step": 58,
       "time": 0.058
     },
     {
+      "analytic_kinetic_energy": 0.249410695653,
+      "divergence_l2": 9.674600369785465e-16,
+      "energy_relative_error": 7.548960240198012e-06,
       "kinetic_energy": 0.249412578444,
       "step": 59,
       "time": 0.059
     },
     {
+      "analytic_kinetic_energy": 0.249400719424,
+      "divergence_l2": 9.781543085683148e-16,
+      "energy_relative_error": 7.676909209970102e-06,
       "kinetic_energy": 0.249402634051,
       "step": 60,
       "time": 0.06
     },
     {
+      "analytic_kinetic_energy": 0.249390743595,
+      "divergence_l2": 9.885686931258419e-16,
+      "energy_relative_error": 7.804858196165907e-06,
       "kinetic_energy": 0.249392690054,
       "step": 61,
       "time": 0.061
     },
     {
+      "analytic_kinetic_energy": 0.249380768165,
+      "divergence_l2": 1.0096030431055619e-15,
+      "energy_relative_error": 7.932807198618895e-06,
       "kinetic_energy": 0.249382746454,
       "step": 62,
       "time": 0.062
     },
     {
+      "analytic_kinetic_energy": 0.249370793134,
+      "divergence_l2": 9.815280268752042e-16,
+      "energy_relative_error": 8.060756217496442e-06,
       "kinetic_energy": 0.249372803251,
       "step": 63,
       "time": 0.063
     },
     {
+      "analytic_kinetic_energy": 0.249360818501,
+      "divergence_l2": 9.298219052121226e-16,
+      "energy_relative_error": 8.188705252854683e-06,
       "kinetic_energy": 0.249362860444,
       "step": 64,
       "time": 0.064
     },
     {
+      "analytic_kinetic_energy": 0.249350844268,
+      "divergence_l2": 9.142213555723261e-16,
+      "energy_relative_error": 8.316654304415856e-06,
       "kinetic_energy": 0.249352918033,
       "step": 65,
       "time": 0.065
     },
     {
+      "analytic_kinetic_energy": 0.249340870434,
+      "divergence_l2": 8.904682584516212e-16,
+      "energy_relative_error": 8.44460337245877e-06,
       "kinetic_energy": 0.249342976019,
       "step": 66,
       "time": 0.066
     },
     {
+      "analytic_kinetic_energy": 0.249330896999,
+      "divergence_l2": 8.819873613285034e-16,
+      "energy_relative_error": 8.572552456817024e-06,
       "kinetic_energy": 0.249333034401,
       "step": 67,
       "time": 0.067
     },
     {
+      "analytic_kinetic_energy": 0.249320923962,
+      "divergence_l2": 9.264235975969574e-16,
+      "energy_relative_error": 8.700501557546881e-06,
       "kinetic_energy": 0.249323093179,
       "step": 68,
       "time": 0.068
     },
     {
+      "analytic_kinetic_energy": 0.249310951325,
+      "divergence_l2": 9.594054102933564e-16,
+      "energy_relative_error": 8.828450674704636e-06,
       "kinetic_energy": 0.249313152354,
       "step": 69,
       "time": 0.069
     },
     {
+      "analytic_kinetic_energy": 0.249300979086,
+      "divergence_l2": 9.267090160413349e-16,
+      "energy_relative_error": 8.956399808235301e-06,
       "kinetic_energy": 0.249303211925,
       "step": 70,
       "time": 0.07
     },
     {
+      "analytic_kinetic_energy": 0.249291007246,
+      "divergence_l2": 9.240272220042704e-16,
+      "energy_relative_error": 9.084348958083907e-06,
       "kinetic_energy": 0.249293271893,
       "step": 71,
       "time": 0.071
     },
     {
+      "analytic_kinetic_energy": 0.249281035805,
+      "divergence_l2": 9.347508425183952e-16,
+      "energy_relative_error": 9.212298124306848e-06,
       "kinetic_energy": 0.249283332257,
       "step": 72,
       "time": 0.072
     },
     {
+      "analytic_kinetic_energy": 0.249271064763,
+      "divergence_l2": 9.356641918512234e-16,
+      "energy_relative_error": 9.34024730684922e-06,
       "kinetic_energy": 0.249273393017,
       "step": 73,
       "time": 0.073
     },
     {
+      "analytic_kinetic_energy": 0.24926109412,
+      "divergence_l2": 9.223444584414143e-16,
+      "energy_relative_error": 9.468196505878841e-06,
       "kinetic_energy": 0.249263454173,
       "step": 74,
       "time": 0.074
     },
     {
+      "analytic_kinetic_energy": 0.249251123876,
+      "divergence_l2": 9.286308605496334e-16,
+      "energy_relative_error": 9.596145721229524e-06,
       "kinetic_energy": 0.249253515726,
       "step": 75,
       "time": 0.075
     },
     {
+      "analytic_kinetic_energy": 0.24924115403,
+      "divergence_l2": 9.680656761799203e-16,
+      "energy_relative_error": 9.724094952846444e-06,
       "kinetic_energy": 0.249243577675,
       "step": 76,
       "time": 0.076
     },
     {
+      "analytic_kinetic_energy": 0.249231184584,
+      "divergence_l2": 1.0109051100765743e-15,
+      "energy_relative_error": 9.852044201008896e-06,
       "kinetic_energy": 0.24923364002,
       "step": 77,
       "time": 0.077
     },
     {
+      "analytic_kinetic_energy": 0.249221215536,
+      "divergence_l2": 1.013079753836519e-15,
+      "energy_relative_error": 9.97999346532804e-06,
       "kinetic_energy": 0.249223702762,
       "step": 78,
       "time": 0.078
     },
     {
+      "analytic_kinetic_energy": 0.249211246886,
+      "divergence_l2": 1.042745540804218e-15,
+      "energy_relative_error": 1.010794274630599e-05,
       "kinetic_energy": 0.249213765899,
       "step": 79,
       "time": 0.079
     },
     {
+      "analytic_kinetic_energy": 0.249201278636,
+      "divergence_l2": 1.052400427072186e-15,
+      "energy_relative_error": 1.0235892043442574e-05,
       "kinetic_energy": 0.249203829433,
       "step": 80,
       "time": 0.08
     },
     {
+      "analytic_kinetic_energy": 0.249191310784,
+      "divergence_l2": 1.035374333707351e-15,
+      "energy_relative_error": 1.0363841356905868e-05,
       "kinetic_energy": 0.249193893363,
       "step": 81,
       "time": 0.081
     },
     {
+      "analytic_kinetic_energy": 0.249181343331,
+      "divergence_l2": 9.87623396106434e-16,
+      "energy_relative_error": 1.0491790686864005e-05,
       "kinetic_energy": 0.249183957689,
       "step": 82,
       "time": 0.082
     },
     {
+      "analytic_kinetic_energy": 0.249171376276,
+      "divergence_l2": 1.0157780761879059e-15,
+      "energy_relative_error": 1.0619740033151006e-05,
       "kinetic_energy": 0.249174022412,
       "step": 83,
       "time": 0.083
     },
     {
+      "analytic_kinetic_energy": 0.249161409621,
+      "divergence_l2": 1.0072777584095042e-15,
+      "energy_relative_error": 1.0747689395823687e-05,
       "kinetic_energy": 0.24916408753,
       "step": 84,
       "time": 0.084
     },
     {
+      "analytic_kinetic_energy": 0.249151443364,
+      "divergence_l2": 9.715644109253452e-16,
+      "energy_relative_error": 1.0875638774827505e-05,
       "kinetic_energy": 0.249154153045,
       "step": 85,
       "time": 0.085
     },
     {
+      "analytic_kinetic_energy": 0.249141477505,
+      "divergence_l2": 9.760046679490703e-16,
+      "energy_relative_error": 1.100358817021935e-05,
       "kinetic_energy": 0.249144218956,
       "step": 86,
       "time": 0.086
     },
     {
+      "analytic_kinetic_energy": 0.249131512046,
+      "divergence_l2": 9.939502681550333e-16,
+      "energy_relative_error": 1.113153758194474e-05,
       "kinetic_energy": 0.249134285262,
       "step": 87,
       "time": 0.087
     },
     {
+      "analytic_kinetic_energy": 0.249121546984,
+      "divergence_l2": 1.0461674706520794e-15,
+      "energy_relative_error": 1.1259487010172046e-05,
       "kinetic_energy": 0.249124351965,
       "step": 88,
       "time": 0.088
     },
     {
+      "analytic_kinetic_energy": 0.249111582322,
+      "divergence_l2": 1.0417125051923466e-15,
+      "energy_relative_error": 1.1387436454735446e-05,
       "kinetic_energy": 0.249114419064,
       "step": 89,
       "time": 0.089
     },
     {
+      "analytic_kinetic_energy": 0.249101618058,
+      "divergence_l2": 9.886355961078382e-16,
+      "energy_relative_error": 1.1515385915580541e-05,
       "kinetic_energy": 0.249104486559,
       "step": 90,
       "time": 0.09
     },
     {
+      "analytic_kinetic_energy": 0.249091654192,
+      "divergence_l2": 1.0517567320768487e-15,
+      "energy_relative_error": 1.1643335392875816e-05,
       "kinetic_energy": 0.24909455445,
       "step": 91,
       "time": 0.091
     },
     {
+      "analytic_kinetic_energy": 0.249081690725,
+      "divergence_l2": 1.0503319363073653e-15,
+      "energy_relative_error": 1.1771284886455517e-05,
       "kinetic_energy": 0.249084622737,
       "step": 92,
       "time": 0.092
     },
     {
+      "analytic_kinetic_energy": 0.249071727657,
+      "divergence_l2": 1.0445594130291755e-15,
+      "energy_relative_error": 1.1899234396488207e-05,
       "kinetic_energy": 0.24907469142,
       "step": 93,
       "time": 0.093
     },
     {
+      "analytic_kinetic_energy": 0.249061764987,
+      "divergence_l2": 1.0367796739183375e-15,
+      "energy_relative_error": 1.2027183922808187e-05,
       "kinetic_energy": 0.249064760499,
       "step": 94,
       "time": 0.094
     },
     {
+      "analytic_kinetic_energy": 0.249051802716,
+      "divergence_l2": 1.0311391804560239e-15,
+      "energy_relative_error": 1.2155133465584092e-05,
       "kinetic_energy": 0.249054829974,
       "step": 95,
       "time": 0.095
     },
     {
+      "analytic_kinetic_energy": 0.249041840843,
+      "divergence_l2": 1.0209116797348054e-15,
+      "energy_relative_error": 1.228308302476173e-05,
       "kinetic_energy": 0.249044899845,
       "step": 96,
       "time": 0.096
     },
     {
+      "analytic_kinetic_energy": 0.249031879369,
+      "divergence_l2": 9.990573072743621e-16,
+      "energy_relative_error": 1.2411032600286923e-05,
       "kinetic_energy": 0.249034970111,
       "step": 97,
       "time": 0.097
     },
     {
+      "analytic_kinetic_energy": 0.249021918293,
+      "divergence_l2": 1.0090210453859172e-15,
+      "energy_relative_error": 1.253898219210552e-05,
       "kinetic_energy": 0.249025040774,
       "step": 98,
       "time": 0.098
     },
     {
+      "analytic_kinetic_energy": 0.249011957615,
+      "divergence_l2": 1.0221875540397882e-15,
+      "energy_relative_error": 1.2666931800274855e-05,
       "kinetic_energy": 0.249015111833,
       "step": 99,
       "time": 0.099
     },
     {
+      "analytic_kinetic_energy": 0.249001997336,
+      "divergence_l2": 1.0439367011686798e-15,
+      "energy_relative_error": 1.279488142485231e-05,
       "kinetic_energy": 0.249005183287,
       "step": 100,
       "time": 0.1

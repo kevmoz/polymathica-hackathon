@@ -1,6 +1,15 @@
 {
+  "convergence": {
+    "mean_observed_order": 2.0050088027938417,
+    "observed_orders": [
+      1.9978273482647937,
+      2.01219025732289
+    ]
+  },
   "metrics": {
+    "energy_relative_error": 1.2794881302461127e-05,
     "l2_error": 4.5146209629361505e-06,
+    "max_divergence_l2": 1.052400427072186e-15,
     "max_error": 6.384638195133796e-06
   },
   "reference": {
@@ -10,7 +19,10 @@
   "schema": "polymathica.benchmark.validation.v1",
   "status": "passed",
   "tolerances": {
+    "divergence_l2_tolerance": 1e-12,
+    "energy_relative_tolerance": 0.0002,
     "l2_tolerance": 0.0002,
-    "max_tolerance": 0.0004
+    "max_tolerance": 0.0004,
+    "minimum_observed_order": 1.9
   }
 }

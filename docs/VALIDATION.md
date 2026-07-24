@@ -37,6 +37,7 @@ Benchmark evidence:
 
 - `demo/benchmark/benchmark_config.json`
 - `demo/benchmark/benchmark_validation.json`
+- `demo/benchmark/convergence_study.json`
 - `demo/benchmark/benchmark_manifest.json`
 
 See [BENCHMARK.md](BENCHMARK.md) for the public solver reference comparison.
