@@ -4,6 +4,7 @@
 import argparse
 import os
 import shutil
+import subprocess
 from pathlib import Path
 from typing import List, Optional, Tuple
 
@@ -11,6 +12,8 @@ REPO = "kevmoz/polymathica-hackathon"
 TAG = "v1.0.0-hackathon"
 DEFAULT_BASE_PATH = r"D:\Polymathica\ACTIVE_REPO\runtime_outputs"
 RELEASE_ASSET_DIR = Path("release_assets")
+DEFAULT_HEVC_CRF = 23
+DEFAULT_HEVC_PRESET = "slow"
 
 VIDEO_SOURCES = [
     {
@@ -74,7 +77,50 @@ def verify_videos(base_path: str) -> List[Tuple[str, bool, Optional[str]]]:
         results.append((video["name"], exists, full_path if exists else None))
     return results
 
-def prepare_release_assets(base_path: str, output_dir: Path = RELEASE_ASSET_DIR) -> List[Path]:
+def compress_hevc_balanced(
+    source: Path,
+    target: Path,
+    *,
+    crf: int = DEFAULT_HEVC_CRF,
+    preset: str = DEFAULT_HEVC_PRESET,
+) -> Path:
+    """Create a balanced-size H.265/HEVC MP4 using constant quality."""
+    if not 20 <= int(crf) <= 24:
+        raise ValueError("Balanced HEVC CRF should stay between 20 and 24")
+    target.parent.mkdir(parents=True, exist_ok=True)
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i",
+        str(source),
+        "-c:v",
+        "libx265",
+        "-crf",
+        str(crf),
+        "-preset",
+        preset,
+        "-tag:v",
+        "hvc1",
+        "-c:a",
+        "aac",
+        "-b:a",
+        "128k",
+        "-movflags",
+        "+faststart",
+        str(target),
+    ]
+    subprocess.run(cmd, check=True)
+    return target
+
+
+def prepare_release_assets(
+    base_path: str,
+    output_dir: Path = RELEASE_ASSET_DIR,
+    *,
+    compress_hevc: bool = False,
+    hevc_crf: int = DEFAULT_HEVC_CRF,
+    hevc_preset: str = DEFAULT_HEVC_PRESET,
+) -> List[Path]:
     """Copy found videos to release asset filenames used by the gallery."""
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -86,6 +132,11 @@ def prepare_release_assets(base_path: str, output_dir: Path = RELEASE_ASSET_DIR)
         target = output_dir / video["release_name"]
         shutil.copy2(source, target)
         copied.append(target)
+        if compress_hevc:
+            release_name = Path(video["release_name"])
+            hevc_target = output_dir / f"{release_name.stem}_hevc{release_name.suffix}"
+            compress_hevc_balanced(source, hevc_target, crf=hevc_crf, preset=hevc_preset)
+            copied.append(hevc_target)
     return copied
 
 
@@ -121,6 +172,20 @@ def generate_html_gallery(output_path: str) -> None:
     Args:
         output_path: Path to write index.html
     """
+    output = Path(output_path)
+    if output.as_posix() == "index.html":
+        progress_doc = "docs/PROGRESS_2026_07_25.md"
+        progress_video = "docs/assets/v533_cfd_room_showcase_silent.mp4"
+        progress_poster = "docs/assets/v533_cfd_room_showcase_export.png"
+    elif output.as_posix() == "docs/index.html":
+        progress_doc = "PROGRESS_2026_07_25.md"
+        progress_video = "assets/v533_cfd_room_showcase_silent.mp4"
+        progress_poster = "assets/v533_cfd_room_showcase_export.png"
+    else:
+        progress_doc = "../PROGRESS_2026_07_25.md"
+        progress_video = "v533_cfd_room_showcase_silent.mp4"
+        progress_poster = "v533_cfd_room_showcase_export.png"
+
     html_content = '''<!DOCTYPE html>
 <html>
 <head>
@@ -154,10 +219,22 @@ def generate_html_gallery(output_path: str) -> None:
         <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/PROJECTION.md">Projection</a>
         <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/POISEUILLE.md">Poiseuille</a>
         <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/VALIDATION.md">Validation</a>
+        <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/PROGRESS_2026_07_25.md">July 25 Progress</a>
+        <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/VIDEO_COMPRESSION.md">Compression</a>
         <a href="https://github.com/kevmoz/polymathica-hackathon/releases/tag/v1.0.0-hackathon">Release</a>
     </p>
     <div class="videos">
 '''
+
+    html_content += f'''        <div class="video-card">
+            <div class="video-title">July 25 CFD Room Progress</div>
+            <div class="video-description">V533 operator-room capture with linked four-view CFD analysis, validated PNG/video export, and Taylor-Green reproducibility evidence.</div>
+            <video controls poster="{progress_poster}">
+                <source src="{progress_video}" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <p><a href="{progress_doc}">Read Progress Evidence</a></p>
+        </div>\n'''
     
     for video in VIDEO_SOURCES:
         html_content += f'''        <div class="video-card">
@@ -174,8 +251,8 @@ def generate_html_gallery(output_path: str) -> None:
 </body>
 </html>'''
     
-    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
-    with open(output_path, 'w', encoding='utf-8') as f:
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with open(output, 'w', encoding='utf-8') as f:
         f.write(html_content)
     print(f"Gallery HTML written to {output_path}")
 
@@ -184,6 +261,23 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--base-path", default=DEFAULT_BASE_PATH)
     parser.add_argument("--yes", action="store_true", help="Generate gallery without prompting")
+    parser.add_argument(
+        "--compress-hevc",
+        action="store_true",
+        help="Also create balanced H.265/HEVC *_hevc.mp4 copies under release_assets",
+    )
+    parser.add_argument(
+        "--hevc-crf",
+        type=int,
+        default=DEFAULT_HEVC_CRF,
+        help="HEVC constant-quality RF/CRF value, balanced range 20-24; default 23",
+    )
+    parser.add_argument(
+        "--hevc-preset",
+        default=DEFAULT_HEVC_PRESET,
+        choices=("medium", "slow", "slower"),
+        help="HEVC encoder preset; slow/slower reduce file size at the same quality",
+    )
     args = parser.parse_args()
     
     print("="*70)
@@ -212,8 +306,18 @@ def main():
     print(f"\nTotal: {found} found, {missing} missing\n")
     
     if found > 0:
-        copied = prepare_release_assets(base_path)
+        copied = prepare_release_assets(
+            base_path,
+            compress_hevc=args.compress_hevc,
+            hevc_crf=args.hevc_crf,
+            hevc_preset=args.hevc_preset,
+        )
         print(f"Prepared {len(copied)} release assets in {RELEASE_ASSET_DIR}\n")
+        if args.compress_hevc:
+            print(
+                "Balanced HEVC *_hevc.mp4 copies written to "
+                f"{RELEASE_ASSET_DIR} with CRF {args.hevc_crf} and preset {args.hevc_preset}\n"
+            )
         print_upload_commands()
 
         should_generate = args.yes
@@ -231,6 +335,7 @@ def main():
     print(f"2. Run: gh release create {TAG} ...")
     print(f"3. Run: gh release upload {TAG} ...")
     print("4. Videos will appear on GitHub Releases page")
+    print("5. Optional size reduction: rerun with --compress-hevc --hevc-crf 22 --hevc-preset slow")
     print("="*70)
 
 if __name__ == "__main__":

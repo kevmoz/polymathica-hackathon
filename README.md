@@ -20,6 +20,7 @@ A governed scientific workflow that converts a configured Navier-Stokes experime
 - Pressure-projection benchmark: [docs/PROJECTION.md](docs/PROJECTION.md)
 - Poiseuille channel benchmark: [docs/POISEUILLE.md](docs/POISEUILLE.md)
 - July 25 progress showcase: [docs/PROGRESS_2026_07_25.md](docs/PROGRESS_2026_07_25.md)
+- Video compression guide: [docs/VIDEO_COMPRESSION.md](docs/VIDEO_COMPRESSION.md)
 
 ## Demonstrated Workflow
 
@@ -158,6 +159,12 @@ To refresh release assets from the local POLYMATHICA workspace:
 ```bash
 python scripts/organize_videos.py --yes
 python scripts/upload_release_assets.py
+```
+
+To prepare smaller balanced H.265/HEVC copies:
+
+```bash
+python scripts/organize_videos.py --yes --compress-hevc --hevc-crf 23 --hevc-preset slow
 ```
 
 See [docs/VIDEO_MANIFEST.md](docs/VIDEO_MANIFEST.md) for source mappings and playback notes.

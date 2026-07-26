@@ -166,6 +166,30 @@ Embedded on GitHub Pages gallery with direct download links.
 
 ---
 
+## Balanced File-Size Reduction
+
+For smaller release/download copies, use constant-quality H.265/HEVC rather than targeting a fixed bitrate.
+
+Recommended balanced settings:
+
+- codec: H.265 / HEVC
+- RF / CRF: `20` to `24`
+- default balanced value: `23`
+- encoder preset: `slow` or `slower`
+- audio: AAC `128k`
+
+Command:
+
+```bash
+python scripts/organize_videos.py --yes --compress-hevc --hevc-crf 23 --hevc-preset slow
+```
+
+This writes smaller HEVC copies beside the normal assets using `_hevc.mp4` filenames. Keep H.264 copies available for maximum browser compatibility.
+
+See [VIDEO_COMPRESSION.md](VIDEO_COMPRESSION.md) for the full guidance.
+
+---
+
 ## File Organization in Submission
 
 ```
