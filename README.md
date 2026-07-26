@@ -29,7 +29,7 @@ A governed scientific workflow that converts a configured Navier-Stokes experime
 Create -> Configure -> Run or Replay -> Validate -> Visualise -> Report -> Archive
 ```
 
-This repository is the compact public submission package for judges. It contains a runnable deterministic replay workflow, tests, CI configuration, generated evidence, documentation, links to the original seven release videos, and a newly ordered six-video 60-second progress sequence published as GitHub Release assets.
+This repository is the compact public submission package for judges. It contains a runnable deterministic replay workflow, tests, CI configuration, generated evidence, documentation, links to the original seven release videos, and a newly ordered eight-video 60-second progress sequence published as GitHub Release assets.
 
 We are not asking you to trust our vision. This repository is a compact, runnable evidence package that demonstrates the operating pattern behind the broader POLYMATHICA ecosystem.
 
@@ -144,7 +144,7 @@ The submission focuses on the evidence pattern: every public claim is tied to a 
 
 ## Video Assets
 
-The release contains the original seven prepared videos plus six ordered full 60-second progress clips.
+The release contains the original seven prepared videos plus eight ordered full 60-second progress clips.
 
 Ordered recent 60-second progress sequence:
 
@@ -154,6 +154,8 @@ Ordered recent 60-second progress sequence:
 - `progress_04_v534_ns3d_abc_flow_silent_60s.mp4`
 - `progress_05_v532_periodic_vortex_interaction_narrated_60s.mp4`
 - `progress_06_v532_periodic_vortex_interaction_silent_60s.mp4`
+- `progress_07_v528_ns3d_taylor_green_narrated_60s.mp4`
+- `progress_08_v528_ns3d_taylor_green_silent_60s.mp4`
 
 Original prepared videos:
 

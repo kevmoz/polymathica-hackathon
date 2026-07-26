@@ -91,7 +91,7 @@ Related source evidence:
 
 ### Ordered Recent 60-Second Progress Sequence
 
-These are the six most recent unique full 60-second videos selected for judge viewing on July 26, 2026. They are ordered newest to oldest by source timestamp and published as GitHub Release assets.
+These are the most recent unique full 60-second progress videos selected for judge viewing on July 26, 2026, extended with the two V528 Taylor-Green views called out from screenshot evidence. They are ordered newest to oldest by source timestamp and published as GitHub Release assets.
 
 | Order | Release asset | Source path | Duration |
 | --- | --- | --- | --- |
@@ -101,6 +101,8 @@ These are the six most recent unique full 60-second videos selected for judge vi
 | 4 | `progress_04_v534_ns3d_abc_flow_silent_60s.mp4` | `v534_ns3d_abc_flow/v534-ns3d-abc-flow/run-v534-ns3d-abc-flow-001/rendering/video_silent.mp4` | 60.000s |
 | 5 | `progress_05_v532_periodic_vortex_interaction_narrated_60s.mp4` | `v532_release_assets/v532-periodic-vortex-interaction-narrated.mp4` | 60.000s |
 | 6 | `progress_06_v532_periodic_vortex_interaction_silent_60s.mp4` | `v532_release_assets/v532-periodic-vortex-interaction-silent.mp4` | 60.000s |
+| 7 | `progress_07_v528_ns3d_taylor_green_narrated_60s.mp4` | `v528_ns3d_canonical_completion/v528-ns3d-taylor-green-canonical/run-v528-ns3d-taylor-green-001/rendering/video_narrated.mp4` | 60.000s |
+| 8 | `progress_08_v528_ns3d_taylor_green_silent_60s.mp4` | `v528_ns3d_canonical_completion/v528-ns3d-taylor-green-canonical/run-v528-ns3d-taylor-green-001/rendering/video_silent.mp4` | 60.000s |
 
 See [RECENT_60S_SHOWCASE.md](RECENT_60S_SHOWCASE.md) for the judge-facing ordered sequence and source SHA-256 prefixes.
 
@@ -161,6 +163,8 @@ gh release upload v1.0.0-hackathon \
   release_assets/progress_04_v534_ns3d_abc_flow_silent_60s.mp4 \
   release_assets/progress_05_v532_periodic_vortex_interaction_narrated_60s.mp4 \
   release_assets/progress_06_v532_periodic_vortex_interaction_silent_60s.mp4 \
+  release_assets/progress_07_v528_ns3d_taylor_green_narrated_60s.mp4 \
+  release_assets/progress_08_v528_ns3d_taylor_green_silent_60s.mp4 \
   release_assets/polymathica_60s_cinematic.mp4 \
   release_assets/polymathica_ns_cinematic.mp4 \
   release_assets/polymathica_graphics_core_postfx.mp4 \
@@ -225,6 +229,8 @@ GitHub Release: v1.0.0-hackathon
 ├── progress_04_v534_ns3d_abc_flow_silent_60s.mp4
 ├── progress_05_v532_periodic_vortex_interaction_narrated_60s.mp4
 ├── progress_06_v532_periodic_vortex_interaction_silent_60s.mp4
+├── progress_07_v528_ns3d_taylor_green_narrated_60s.mp4
+├── progress_08_v528_ns3d_taylor_green_silent_60s.mp4
 ├── polymathica_60s_cinematic.mp4 (System Overview)
 ├── polymathica_ns_cinematic.mp4 (NS Demo)
 ├── polymathica_graphics_core_postfx.mp4 (Graphics Core)

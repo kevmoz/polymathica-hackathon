@@ -52,6 +52,20 @@ RECENT_60S_VIDEO_SOURCES = [
         "release_name": "progress_06_v532_periodic_vortex_interaction_silent_60s.mp4",
         "description": "Full 60-second V532 periodic vortex interaction render without narration.",
     },
+    {
+        "name": "07 - V528 NS3D Taylor-Green Canonical (Narrated)",
+        "path": "v528_ns3d_canonical_completion/v528-ns3d-taylor-green-canonical/run-v528-ns3d-taylor-green-001/rendering/video_narrated.mp4",
+        "release_name": "progress_07_v528_ns3d_taylor_green_narrated_60s.mp4",
+        "description": "Full 60-second V528 canonical Taylor-Green NS3D validation run with narration.",
+        "poster": "v528_taylor_green_qcriterion_isosurface.png",
+    },
+    {
+        "name": "08 - V528 NS3D Taylor-Green Canonical (Silent)",
+        "path": "v528_ns3d_canonical_completion/v528-ns3d-taylor-green-canonical/run-v528-ns3d-taylor-green-001/rendering/video_silent.mp4",
+        "release_name": "progress_08_v528_ns3d_taylor_green_silent_60s.mp4",
+        "description": "Full 60-second V528 canonical Taylor-Green NS3D validation render without narration.",
+        "poster": "v528_taylor_green_voxel_boundary.png",
+    },
 ]
 
 LEGACY_VIDEO_SOURCES = [
@@ -113,9 +127,14 @@ def verify_videos(base_path: str) -> List[Tuple[str, bool, Optional[str]]]:
     """
     results = []
     for video in VIDEO_SOURCES:
-        full_path = os.path.join(base_path, video["path"])
-        exists = os.path.isfile(full_path)
-        results.append((video["name"], exists, full_path if exists else None))
+        full_path = Path(base_path) / video["path"]
+        staged_path = RELEASE_ASSET_DIR / video["release_name"]
+        if full_path.is_file():
+            results.append((video["name"], True, str(full_path)))
+        elif staged_path.is_file():
+            results.append((video["name"], True, str(staged_path)))
+        else:
+            results.append((video["name"], False, None))
     return results
 
 def compress_hevc_balanced(
@@ -168,9 +187,12 @@ def prepare_release_assets(
     copied = []
     for video in VIDEO_SOURCES:
         source = Path(base_path) / video["path"]
+        target = output_dir / video["release_name"]
+        if not source.is_file() and target.is_file():
+            copied.append(target)
+            continue
         if not source.is_file():
             continue
-        target = output_dir / video["release_name"]
         shutil.copy2(source, target)
         copied.append(target)
         if compress_hevc:
@@ -222,10 +244,19 @@ def generate_html_gallery(output_path: str) -> None:
         progress_doc = "PROGRESS_2026_07_25.md"
         progress_video = "assets/v533_cfd_room_showcase_silent.mp4"
         progress_poster = "assets/v533_cfd_room_showcase_export.png"
+        asset_prefix = "assets"
     else:
         progress_doc = "../PROGRESS_2026_07_25.md"
         progress_video = "v533_cfd_room_showcase_silent.mp4"
         progress_poster = "v533_cfd_room_showcase_export.png"
+        asset_prefix = "."
+    if output.as_posix() == "index.html":
+        asset_prefix = "docs/assets"
+
+    def gallery_asset_path(filename: str) -> str:
+        if asset_prefix == ".":
+            return filename
+        return f"{asset_prefix}/{filename}"
 
     html_content = '''<!DOCTYPE html>
 <html>
@@ -269,10 +300,12 @@ def generate_html_gallery(output_path: str) -> None:
 '''
 
     for video in RECENT_60S_VIDEO_SOURCES:
+        poster = video.get("poster")
+        poster_attr = f' poster="{gallery_asset_path(poster)}"' if poster else ""
         html_content += f'''        <div class="video-card">
             <div class="video-title">{video['name']}</div>
             <div class="video-description">{video['description']}</div>
-            <video controls>
+            <video controls{poster_attr}>
                 <source src="https://github.com/{REPO}/releases/download/{TAG}/{video['release_name']}" type="video/mp4">
                 Your browser does not support video playback.
             </video>
