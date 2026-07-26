@@ -19,6 +19,7 @@ A governed scientific workflow that converts a configured Navier-Stokes experime
 - Benchmark matrix: [docs/BENCHMARK_MATRIX.md](docs/BENCHMARK_MATRIX.md)
 - Pressure-projection benchmark: [docs/PROJECTION.md](docs/PROJECTION.md)
 - Poiseuille channel benchmark: [docs/POISEUILLE.md](docs/POISEUILLE.md)
+- July 25 progress showcase: [docs/PROGRESS_2026_07_25.md](docs/PROGRESS_2026_07_25.md)
 
 ## Demonstrated Workflow
 
@@ -37,6 +38,18 @@ This repository demonstrates the governed evidence workflow using a deterministi
 It does not contain the complete private POLYMATHICA solver, PSIC, Graphics Core or Olana development repositories.
 
 The public demo verifies orchestration, configuration governance, validation gates, scientific visualisation, report generation, provenance hashing, artifact integrity checks and archive creation. It also includes three compact benchmark families: Taylor-Green viscous decay, known-mode pressure projection and plane Poiseuille channel flow. The release videos show larger GPU/rendering outputs prepared from the broader POLYMATHICA workspace.
+
+## July 25 Progress Update
+
+The latest private-workspace evidence added for judges is the V533 CFD room showcase and a reproducible Taylor-Green vortex comparison pair.
+
+- V533 operator-room video: [docs/assets/v533_cfd_room_showcase_silent.mp4](docs/assets/v533_cfd_room_showcase_silent.mp4)
+- V533 still image: [docs/assets/v533_cfd_room_showcase_export.png](docs/assets/v533_cfd_room_showcase_export.png)
+- Progress note: [docs/PROGRESS_2026_07_25.md](docs/PROGRESS_2026_07_25.md)
+- Source comparison: `CMP-20260725-223914-d2742d`
+- Source runs: `CFD-20260725-223859-a6e661` and `CFD-20260725-223906-62d046`
+
+The source capture passed browser, manifest, PNG export, video validity and frame-linking checks. The Taylor-Green comparison was equivalent within tolerance with passed analytical validation in both source runs.
 
 ## Run In Three Commands
 
@@ -138,6 +151,7 @@ The release contains seven prepared videos:
 - `polymathica_3d_gpu_cuda_60s.mp4`
 - `polymathica_2d_validation_replay.mp4`
 - `polymathica_lab_workflow.mp4`
+- `docs/assets/v533_cfd_room_showcase_silent.mp4`
 
 To refresh release assets from the local POLYMATHICA workspace:
 

@@ -71,6 +71,24 @@ This manifest maps the actual POLYMATHICA videos for judge evaluation.
 
 ---
 
+#### 8. July 25 CFD Room Progress Capture
+
+**File**: `v533_cfd_room_showcase/v533-cfd-room-showcase/run-v533-cfd-room-showcase-001/v533_cfd_room_showcase_silent.mp4`  
+**Path**: `D:\Polymathica\ACTIVE_REPO\runtime_outputs\v533_cfd_room_showcase\v533-cfd-room-showcase\run-v533-cfd-room-showcase-001\v533_cfd_room_showcase_silent.mp4`  
+**Public copy**: `docs/assets/v533_cfd_room_showcase_silent.mp4`  
+**Still image**: `docs/assets/v533_cfd_room_showcase_export.png`  
+**Date**: 2026-07-25  
+**Content**: V533 operator-room capture with linked four-view CFD analysis, field selection, timeline scrubbing, theme switching and validated PNG/video export.
+
+Related source evidence:
+
+- `capture_validation.json`: `validation_status=passed`
+- `room_state_manifest.json`: linked source frames and room actions
+- `CMP-20260725-223914-d2742d`: Taylor-Green reproducibility comparison
+- source runs: `CFD-20260725-223859-a6e661` and `CFD-20260725-223906-62d046`
+
+---
+
 ### Backup & Additional Sources
 
 **Graphics Core Review**:  
@@ -97,6 +115,7 @@ This manifest maps the actual POLYMATHICA videos for judge evaluation.
 3. Graphics rendering (3 min)
 4. Results/validation (3 min)
 5. Workflow summary (3 min)
+6. July 25 V533 CFD room progress capture (operator-room proof)
 
 ---
 
