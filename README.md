@@ -20,6 +20,7 @@ A governed scientific workflow that converts a configured Navier-Stokes experime
 - Pressure-projection benchmark: [docs/PROJECTION.md](docs/PROJECTION.md)
 - Poiseuille channel benchmark: [docs/POISEUILLE.md](docs/POISEUILLE.md)
 - July 25 progress showcase: [docs/PROGRESS_2026_07_25.md](docs/PROGRESS_2026_07_25.md)
+- Ordered recent 60-second progress videos: [docs/RECENT_60S_SHOWCASE.md](docs/RECENT_60S_SHOWCASE.md)
 - Video compression guide: [docs/VIDEO_COMPRESSION.md](docs/VIDEO_COMPRESSION.md)
 
 ## Demonstrated Workflow
@@ -28,7 +29,7 @@ A governed scientific workflow that converts a configured Navier-Stokes experime
 Create -> Configure -> Run or Replay -> Validate -> Visualise -> Report -> Archive
 ```
 
-This repository is the compact public submission package for judges. It contains a runnable deterministic replay workflow, tests, CI configuration, generated evidence, documentation, and links to seven real simulation videos published as GitHub Release assets.
+This repository is the compact public submission package for judges. It contains a runnable deterministic replay workflow, tests, CI configuration, generated evidence, documentation, links to the original seven release videos, and a newly ordered six-video 60-second progress sequence published as GitHub Release assets.
 
 We are not asking you to trust our vision. This repository is a compact, runnable evidence package that demonstrates the operating pattern behind the broader POLYMATHICA ecosystem.
 
@@ -143,7 +144,18 @@ The submission focuses on the evidence pattern: every public claim is tied to a 
 
 ## Video Assets
 
-The release contains seven prepared videos:
+The release contains the original seven prepared videos plus six ordered full 60-second progress clips.
+
+Ordered recent 60-second progress sequence:
+
+- `progress_01_v534_g2r_room_capture_narrated_60s.mp4`
+- `progress_02_v534_g2r_room_capture_silent_60s.mp4`
+- `progress_03_v534_ns3d_abc_flow_narrated_60s.mp4`
+- `progress_04_v534_ns3d_abc_flow_silent_60s.mp4`
+- `progress_05_v532_periodic_vortex_interaction_narrated_60s.mp4`
+- `progress_06_v532_periodic_vortex_interaction_silent_60s.mp4`
+
+Original prepared videos:
 
 - `polymathica_60s_cinematic.mp4`
 - `polymathica_ns_cinematic.mp4`

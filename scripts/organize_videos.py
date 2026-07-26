@@ -15,7 +15,46 @@ RELEASE_ASSET_DIR = Path("release_assets")
 DEFAULT_HEVC_CRF = 23
 DEFAULT_HEVC_PRESET = "slow"
 
-VIDEO_SOURCES = [
+RECENT_60S_VIDEO_SOURCES = [
+    {
+        "name": "01 - V534-G2R Room Capture (Narrated)",
+        "path": "v534_g2r_room_capture/v534_g2r_room_capture_narrated.mp4",
+        "release_name": "progress_01_v534_g2r_room_capture_narrated_60s.mp4",
+        "description": "Latest full 60-second V534-G2R room capture with narration and upgraded graphics evidence.",
+    },
+    {
+        "name": "02 - V534-G2R Room Capture (Silent)",
+        "path": "v534_g2r_room_capture/v534_g2r_room_capture.mp4",
+        "release_name": "progress_02_v534_g2r_room_capture_silent_60s.mp4",
+        "description": "Latest full 60-second V534-G2R room capture without narration.",
+    },
+    {
+        "name": "03 - V534 NS3D ABC Flow (Narrated)",
+        "path": "v534_ns3d_abc_flow/v534-ns3d-abc-flow/run-v534-ns3d-abc-flow-001/rendering/v534_abc_flow_narrated.mp4",
+        "release_name": "progress_03_v534_ns3d_abc_flow_narrated_60s.mp4",
+        "description": "Newest full 60-second V534 3D Navier-Stokes ABC flow run with narration.",
+    },
+    {
+        "name": "04 - V534 NS3D ABC Flow (Silent)",
+        "path": "v534_ns3d_abc_flow/v534-ns3d-abc-flow/run-v534-ns3d-abc-flow-001/rendering/video_silent.mp4",
+        "release_name": "progress_04_v534_ns3d_abc_flow_silent_60s.mp4",
+        "description": "Newest full 60-second V534 3D Navier-Stokes ABC flow render without narration.",
+    },
+    {
+        "name": "05 - V532 Periodic Vortex Interaction (Narrated)",
+        "path": "v532_release_assets/v532-periodic-vortex-interaction-narrated.mp4",
+        "release_name": "progress_05_v532_periodic_vortex_interaction_narrated_60s.mp4",
+        "description": "Full 60-second V532 periodic vortex interaction run with narration.",
+    },
+    {
+        "name": "06 - V532 Periodic Vortex Interaction (Silent)",
+        "path": "v532_release_assets/v532-periodic-vortex-interaction-silent.mp4",
+        "release_name": "progress_06_v532_periodic_vortex_interaction_silent_60s.mp4",
+        "description": "Full 60-second V532 periodic vortex interaction render without narration.",
+    },
+]
+
+LEGACY_VIDEO_SOURCES = [
     {
         "name": "System Overview Cinematic",
         "path": "v493_60s_cinematic_reel/polymathica_60s_cinematic.mp4",
@@ -59,6 +98,8 @@ VIDEO_SOURCES = [
         "description": "Complete lab workflow with monitoring",
     },
 ]
+
+VIDEO_SOURCES = RECENT_60S_VIDEO_SOURCES + LEGACY_VIDEO_SOURCES
 
 def verify_videos(base_path: str) -> List[Tuple[str, bool, Optional[str]]]:
     """
@@ -220,11 +261,23 @@ def generate_html_gallery(output_path: str) -> None:
         <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/POISEUILLE.md">Poiseuille</a>
         <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/VALIDATION.md">Validation</a>
         <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/PROGRESS_2026_07_25.md">July 25 Progress</a>
+        <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/RECENT_60S_SHOWCASE.md">Recent 60s</a>
         <a href="https://github.com/kevmoz/polymathica-hackathon/blob/main/docs/VIDEO_COMPRESSION.md">Compression</a>
         <a href="https://github.com/kevmoz/polymathica-hackathon/releases/tag/v1.0.0-hackathon">Release</a>
     </p>
     <div class="videos">
 '''
+
+    for video in RECENT_60S_VIDEO_SOURCES:
+        html_content += f'''        <div class="video-card">
+            <div class="video-title">{video['name']}</div>
+            <div class="video-description">{video['description']}</div>
+            <video controls>
+                <source src="https://github.com/{REPO}/releases/download/{TAG}/{video['release_name']}" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <p><a href="https://github.com/{REPO}/releases/download/{TAG}/{video['release_name']}">Download Video</a></p>
+        </div>\n'''
 
     html_content += f'''        <div class="video-card">
             <div class="video-title">July 25 CFD Room Progress</div>
@@ -236,7 +289,7 @@ def generate_html_gallery(output_path: str) -> None:
             <p><a href="{progress_doc}">Read Progress Evidence</a></p>
         </div>\n'''
     
-    for video in VIDEO_SOURCES:
+    for video in LEGACY_VIDEO_SOURCES:
         html_content += f'''        <div class="video-card">
             <div class="video-title">{video['name']}</div>
             <div class="video-description">{video['description']}</div>
@@ -249,7 +302,8 @@ def generate_html_gallery(output_path: str) -> None:
     
     html_content += '''    </div>
 </body>
-</html>'''
+</html>
+'''
     
     output.parent.mkdir(parents=True, exist_ok=True)
     with open(output, 'w', encoding='utf-8') as f:

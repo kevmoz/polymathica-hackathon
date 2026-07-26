@@ -89,6 +89,23 @@ Related source evidence:
 
 ---
 
+### Ordered Recent 60-Second Progress Sequence
+
+These are the six most recent unique full 60-second videos selected for judge viewing on July 26, 2026. They are ordered newest to oldest by source timestamp and published as GitHub Release assets.
+
+| Order | Release asset | Source path | Duration |
+| --- | --- | --- | --- |
+| 1 | `progress_01_v534_g2r_room_capture_narrated_60s.mp4` | `v534_g2r_room_capture/v534_g2r_room_capture_narrated.mp4` | 60.000s |
+| 2 | `progress_02_v534_g2r_room_capture_silent_60s.mp4` | `v534_g2r_room_capture/v534_g2r_room_capture.mp4` | 60.000s |
+| 3 | `progress_03_v534_ns3d_abc_flow_narrated_60s.mp4` | `v534_ns3d_abc_flow/v534-ns3d-abc-flow/run-v534-ns3d-abc-flow-001/rendering/v534_abc_flow_narrated.mp4` | 60.000s |
+| 4 | `progress_04_v534_ns3d_abc_flow_silent_60s.mp4` | `v534_ns3d_abc_flow/v534-ns3d-abc-flow/run-v534-ns3d-abc-flow-001/rendering/video_silent.mp4` | 60.000s |
+| 5 | `progress_05_v532_periodic_vortex_interaction_narrated_60s.mp4` | `v532_release_assets/v532-periodic-vortex-interaction-narrated.mp4` | 60.000s |
+| 6 | `progress_06_v532_periodic_vortex_interaction_silent_60s.mp4` | `v532_release_assets/v532-periodic-vortex-interaction-silent.mp4` | 60.000s |
+
+See [RECENT_60S_SHOWCASE.md](RECENT_60S_SHOWCASE.md) for the judge-facing ordered sequence and source SHA-256 prefixes.
+
+---
+
 ### Backup & Additional Sources
 
 **Graphics Core Review**:  
@@ -105,9 +122,11 @@ Related source evidence:
 ## Recommended Selection for Judges
 
 ### Quick Showcase (5 min total)
-1. **System Overview** → `v493_60s_cinematic_reel/polymathica_60s_cinematic.mp4` (60s)
-2. **Live Simulation** → `governed_graphics_core/ns3d-v64-cuda-nvenc-60s/run-v64-60s-001/video.mp4` (60s)
-3. **Results Demo** → `v477_video_export/polymathica_ns_reel.mp4` (3 min)
+1. **Latest V534-G2R Room Capture** → `progress_01_v534_g2r_room_capture_narrated_60s.mp4` (60s)
+2. **V534-G2R Room Capture, Silent** → `progress_02_v534_g2r_room_capture_silent_60s.mp4` (60s)
+3. **V534 NS3D ABC Flow** → `progress_03_v534_ns3d_abc_flow_narrated_60s.mp4` (60s)
+4. **System Overview** → `v493_60s_cinematic_reel/polymathica_60s_cinematic.mp4` (60s)
+5. **Live Simulation** → `governed_graphics_core/ns3d-v64-cuda-nvenc-60s/run-v64-60s-001/video.mp4` (60s)
 
 ### Complete Showcase (15 min)
 1. Cinematic overview (60s)
@@ -136,6 +155,12 @@ gh release create v1.0.0-hackathon \
 cd D:\Polymathica\polymathica-hackathon
 
 gh release upload v1.0.0-hackathon \
+  release_assets/progress_01_v534_g2r_room_capture_narrated_60s.mp4 \
+  release_assets/progress_02_v534_g2r_room_capture_silent_60s.mp4 \
+  release_assets/progress_03_v534_ns3d_abc_flow_narrated_60s.mp4 \
+  release_assets/progress_04_v534_ns3d_abc_flow_silent_60s.mp4 \
+  release_assets/progress_05_v532_periodic_vortex_interaction_narrated_60s.mp4 \
+  release_assets/progress_06_v532_periodic_vortex_interaction_silent_60s.mp4 \
   release_assets/polymathica_60s_cinematic.mp4 \
   release_assets/polymathica_ns_cinematic.mp4 \
   release_assets/polymathica_graphics_core_postfx.mp4 \
@@ -194,6 +219,12 @@ See [VIDEO_COMPRESSION.md](VIDEO_COMPRESSION.md) for the full guidance.
 
 ```
 GitHub Release: v1.0.0-hackathon
+├── progress_01_v534_g2r_room_capture_narrated_60s.mp4
+├── progress_02_v534_g2r_room_capture_silent_60s.mp4
+├── progress_03_v534_ns3d_abc_flow_narrated_60s.mp4
+├── progress_04_v534_ns3d_abc_flow_silent_60s.mp4
+├── progress_05_v532_periodic_vortex_interaction_narrated_60s.mp4
+├── progress_06_v532_periodic_vortex_interaction_silent_60s.mp4
 ├── polymathica_60s_cinematic.mp4 (System Overview)
 ├── polymathica_ns_cinematic.mp4 (NS Demo)
 ├── polymathica_graphics_core_postfx.mp4 (Graphics Core)
