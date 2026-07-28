@@ -4,6 +4,20 @@ A governed scientific workflow that converts a configured Navier-Stokes experime
 
 [![tests](https://github.com/kevmoz/polymathica-hackathon/actions/workflows/tests.yml/badge.svg)](https://github.com/kevmoz/polymathica-hackathon/actions/workflows/tests.yml)
 
+## Ecosystem Position
+
+This repository is the public demonstration lane for the broader POLYMATHICA research operating environment. It is intentionally compact: reviewers can run the evidence workflow, inspect generated artifacts and follow the validation trail without needing access to the larger private development workspace.
+
+| Layer | Role In This Repository |
+|---|---|
+| POLYMATHICA | Demonstrated through the governed evidence workflow and archive lifecycle. |
+| PSIC | Represented as validation and governance expectations, not shipped as the full reasoning system. |
+| Mathematics Core | Public companion repository for governed mathematical representation semantics: [kevmoz/Polymathica_Mathematics_Core](https://github.com/kevmoz/Polymathica_Mathematics_Core). |
+| Graphics Core | Represented through replay, validation traces and release media rather than the full rendering platform. |
+| Architecture Portfolio | Planned blueprint repository for the full 30-system POLYMATHICA research architecture. |
+
+Status: public evidence-demo repository. It should not be read as the complete POLYMATHICA platform, PSIC system, Graphics Core or Mathematics Core implementation.
+
 ## Judge Links
 
 - GitHub Pages gallery: https://kevmoz.github.io/polymathica-hackathon
@@ -135,6 +149,7 @@ Poiseuille summary:
 
 - POLYMATHICA: experiment orchestration, execution state, evidence lifecycle and institute interface.
 - PSIC: scientific reasoning, planning, validation interpretation and research coordination.
+- Mathematics Core: governed mathematical representation semantics, conversion evidence and bridge contracts.
 - Graphics Core: scientific rendering, replay and media evidence generation.
 - Olana: scientific oversight, contradiction analysis, governance review and experiment discussion.
 
